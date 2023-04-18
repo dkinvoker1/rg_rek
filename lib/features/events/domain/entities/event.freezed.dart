@@ -28,7 +28,7 @@ mixin _$Event {
   DateTime get eventStart => throw _privateConstructorUsedError;
   int get eventType => throw _privateConstructorUsedError;
   int get gamesCount => throw _privateConstructorUsedError;
-  Long get remoteId => throw _privateConstructorUsedError;
+  int get remoteId => throw _privateConstructorUsedError;
   List<EventExtendedData> get eventExtendedData =>
       throw _privateConstructorUsedError;
   List<EventGame> get eventGames => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $EventCopyWith<$Res> {
       DateTime eventStart,
       int eventType,
       int gamesCount,
-      Long remoteId,
+      int remoteId,
       List<EventExtendedData> eventExtendedData,
       List<EventGame> eventGames});
 }
@@ -141,7 +141,7 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
       remoteId: null == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as Long,
+              as int,
       eventExtendedData: null == eventExtendedData
           ? _value.eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
@@ -173,7 +173,7 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
       DateTime eventStart,
       int eventType,
       int gamesCount,
-      Long remoteId,
+      int remoteId,
       List<EventExtendedData> eventExtendedData,
       List<EventGame> eventGames});
 }
@@ -255,7 +255,7 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
       remoteId: null == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as Long,
+              as int,
       eventExtendedData: null == eventExtendedData
           ? _value._eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
@@ -316,7 +316,7 @@ class _$_Event extends _Event {
   @override
   final int gamesCount;
   @override
-  final Long remoteId;
+  final int remoteId;
   final List<EventExtendedData> _eventExtendedData;
   @override
   List<EventExtendedData> get eventExtendedData {
@@ -415,7 +415,7 @@ abstract class _Event extends Event {
       required final DateTime eventStart,
       required final int eventType,
       required final int gamesCount,
-      required final Long remoteId,
+      required final int remoteId,
       required final List<EventExtendedData> eventExtendedData,
       required final List<EventGame> eventGames}) = _$_Event;
   _Event._() : super._();
@@ -445,7 +445,7 @@ abstract class _Event extends Event {
   @override
   int get gamesCount;
   @override
-  Long get remoteId;
+  int get remoteId;
   @override
   List<EventExtendedData> get eventExtendedData;
   @override

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
+import 'game_outcome.dart';
 
 part 'event_game.freezed.dart';
 
@@ -14,7 +14,7 @@ class EventGame with _$EventGame {
     required int gameCode,
     required double gameId,
     required bool gameLayout,
-    required int gameName,
+    required String gameName,
     required int gameType,
     required List<int> marketTypes,
     required int periodId,

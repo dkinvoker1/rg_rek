@@ -22,7 +22,7 @@ mixin _$EventGame {
   int get gameCode => throw _privateConstructorUsedError;
   double get gameId => throw _privateConstructorUsedError;
   bool get gameLayout => throw _privateConstructorUsedError;
-  int get gameName => throw _privateConstructorUsedError;
+  String get gameName => throw _privateConstructorUsedError;
   int get gameType => throw _privateConstructorUsedError;
   List<int> get marketTypes => throw _privateConstructorUsedError;
   int get periodId => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $EventGameCopyWith<$Res> {
       int gameCode,
       double gameId,
       bool gameLayout,
-      int gameName,
+      String gameName,
       int gameType,
       List<int> marketTypes,
       int periodId,
@@ -105,7 +105,7 @@ class _$EventGameCopyWithImpl<$Res, $Val extends EventGame>
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       gameType: null == gameType
           ? _value.gameType
           : gameType // ignore: cast_nullable_to_non_nullable
@@ -140,7 +140,7 @@ abstract class _$$_EventGameCopyWith<$Res> implements $EventGameCopyWith<$Res> {
       int gameCode,
       double gameId,
       bool gameLayout,
-      int gameName,
+      String gameName,
       int gameType,
       List<int> marketTypes,
       int periodId,
@@ -198,7 +198,7 @@ class __$$_EventGameCopyWithImpl<$Res>
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       gameType: null == gameType
           ? _value.gameType
           : gameType // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,7 @@ class _$_EventGame extends _EventGame {
   @override
   final bool gameLayout;
   @override
-  final int gameName;
+  final String gameName;
   @override
   final int gameType;
   final List<int> _marketTypes;
@@ -334,7 +334,7 @@ abstract class _EventGame extends EventGame {
       required final int gameCode,
       required final double gameId,
       required final bool gameLayout,
-      required final int gameName,
+      required final String gameName,
       required final int gameType,
       required final List<int> marketTypes,
       required final int periodId,
@@ -354,7 +354,7 @@ abstract class _EventGame extends EventGame {
   @override
   bool get gameLayout;
   @override
-  int get gameName;
+  String get gameName;
   @override
   int get gameType;
   @override
