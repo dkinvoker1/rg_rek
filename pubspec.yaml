@@ -1,0 +1,35 @@
+name: rg_rek
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  auto_route: ^5.0.4
+  bloc: ^8.1.1
+  dartz: ^0.10.1
+  dio: ^5.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  freezed_annotation: ^2.2.0
+  get_it: ^7.2.0
+  json_annotation: ^4.8.0
+  retrofit: ^4.0.1
+
+dev_dependencies:
+  auto_route_generator: ^5.0.3
+  bloc_test: ^9.1.1
+  build_runner: ^2.3.3
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
+  mockito: ^5.4.0
+  retrofit_generator: ^6.0.0+1
+
+flutter:
+  uses-material-design: true
