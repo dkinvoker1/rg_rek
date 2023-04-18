@@ -16,13 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$EventSnapshotExtras {
-  int get CATEGORY_ID_3 => throw _privateConstructorUsedError;
-  int get CATEGORY_ID_2 => throw _privateConstructorUsedError;
-  int get SPORT_ID => throw _privateConstructorUsedError;
-  String get CATEGORY_NAME_1 => throw _privateConstructorUsedError;
-  int get CATEGORY_ID_1 => throw _privateConstructorUsedError;
-  String get CATEGORY_NAME_2 => throw _privateConstructorUsedError;
-  String get CATEGORY_NAME_3 => throw _privateConstructorUsedError;
+  int get categoryId3 => throw _privateConstructorUsedError;
+  int get categoryId2 => throw _privateConstructorUsedError;
+  int get sportId => throw _privateConstructorUsedError;
+  String get categoryName1 => throw _privateConstructorUsedError;
+  int get categoryId1 => throw _privateConstructorUsedError;
+  String get categoryName2 => throw _privateConstructorUsedError;
+  String get categoryName3 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EventSnapshotExtrasCopyWith<EventSnapshotExtras> get copyWith =>
@@ -36,13 +36,13 @@ abstract class $EventSnapshotExtrasCopyWith<$Res> {
       _$EventSnapshotExtrasCopyWithImpl<$Res, EventSnapshotExtras>;
   @useResult
   $Res call(
-      {int CATEGORY_ID_3,
-      int CATEGORY_ID_2,
-      int SPORT_ID,
-      String CATEGORY_NAME_1,
-      int CATEGORY_ID_1,
-      String CATEGORY_NAME_2,
-      String CATEGORY_NAME_3});
+      {int categoryId3,
+      int categoryId2,
+      int sportId,
+      String categoryName1,
+      int categoryId1,
+      String categoryName2,
+      String categoryName3});
 }
 
 /// @nodoc
@@ -58,42 +58,42 @@ class _$EventSnapshotExtrasCopyWithImpl<$Res, $Val extends EventSnapshotExtras>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? CATEGORY_ID_3 = null,
-    Object? CATEGORY_ID_2 = null,
-    Object? SPORT_ID = null,
-    Object? CATEGORY_NAME_1 = null,
-    Object? CATEGORY_ID_1 = null,
-    Object? CATEGORY_NAME_2 = null,
-    Object? CATEGORY_NAME_3 = null,
+    Object? categoryId3 = null,
+    Object? categoryId2 = null,
+    Object? sportId = null,
+    Object? categoryName1 = null,
+    Object? categoryId1 = null,
+    Object? categoryName2 = null,
+    Object? categoryName3 = null,
   }) {
     return _then(_value.copyWith(
-      CATEGORY_ID_3: null == CATEGORY_ID_3
-          ? _value.CATEGORY_ID_3
-          : CATEGORY_ID_3 // ignore: cast_nullable_to_non_nullable
+      categoryId3: null == categoryId3
+          ? _value.categoryId3
+          : categoryId3 // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_ID_2: null == CATEGORY_ID_2
-          ? _value.CATEGORY_ID_2
-          : CATEGORY_ID_2 // ignore: cast_nullable_to_non_nullable
+      categoryId2: null == categoryId2
+          ? _value.categoryId2
+          : categoryId2 // ignore: cast_nullable_to_non_nullable
               as int,
-      SPORT_ID: null == SPORT_ID
-          ? _value.SPORT_ID
-          : SPORT_ID // ignore: cast_nullable_to_non_nullable
+      sportId: null == sportId
+          ? _value.sportId
+          : sportId // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_NAME_1: null == CATEGORY_NAME_1
-          ? _value.CATEGORY_NAME_1
-          : CATEGORY_NAME_1 // ignore: cast_nullable_to_non_nullable
+      categoryName1: null == categoryName1
+          ? _value.categoryName1
+          : categoryName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      CATEGORY_ID_1: null == CATEGORY_ID_1
-          ? _value.CATEGORY_ID_1
-          : CATEGORY_ID_1 // ignore: cast_nullable_to_non_nullable
+      categoryId1: null == categoryId1
+          ? _value.categoryId1
+          : categoryId1 // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_NAME_2: null == CATEGORY_NAME_2
-          ? _value.CATEGORY_NAME_2
-          : CATEGORY_NAME_2 // ignore: cast_nullable_to_non_nullable
+      categoryName2: null == categoryName2
+          ? _value.categoryName2
+          : categoryName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      CATEGORY_NAME_3: null == CATEGORY_NAME_3
-          ? _value.CATEGORY_NAME_3
-          : CATEGORY_NAME_3 // ignore: cast_nullable_to_non_nullable
+      categoryName3: null == categoryName3
+          ? _value.categoryName3
+          : categoryName3 // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -108,13 +108,13 @@ abstract class _$$_EventSnapshotExtrasCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int CATEGORY_ID_3,
-      int CATEGORY_ID_2,
-      int SPORT_ID,
-      String CATEGORY_NAME_1,
-      int CATEGORY_ID_1,
-      String CATEGORY_NAME_2,
-      String CATEGORY_NAME_3});
+      {int categoryId3,
+      int categoryId2,
+      int sportId,
+      String categoryName1,
+      int categoryId1,
+      String categoryName2,
+      String categoryName3});
 }
 
 /// @nodoc
@@ -128,42 +128,42 @@ class __$$_EventSnapshotExtrasCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? CATEGORY_ID_3 = null,
-    Object? CATEGORY_ID_2 = null,
-    Object? SPORT_ID = null,
-    Object? CATEGORY_NAME_1 = null,
-    Object? CATEGORY_ID_1 = null,
-    Object? CATEGORY_NAME_2 = null,
-    Object? CATEGORY_NAME_3 = null,
+    Object? categoryId3 = null,
+    Object? categoryId2 = null,
+    Object? sportId = null,
+    Object? categoryName1 = null,
+    Object? categoryId1 = null,
+    Object? categoryName2 = null,
+    Object? categoryName3 = null,
   }) {
     return _then(_$_EventSnapshotExtras(
-      CATEGORY_ID_3: null == CATEGORY_ID_3
-          ? _value.CATEGORY_ID_3
-          : CATEGORY_ID_3 // ignore: cast_nullable_to_non_nullable
+      categoryId3: null == categoryId3
+          ? _value.categoryId3
+          : categoryId3 // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_ID_2: null == CATEGORY_ID_2
-          ? _value.CATEGORY_ID_2
-          : CATEGORY_ID_2 // ignore: cast_nullable_to_non_nullable
+      categoryId2: null == categoryId2
+          ? _value.categoryId2
+          : categoryId2 // ignore: cast_nullable_to_non_nullable
               as int,
-      SPORT_ID: null == SPORT_ID
-          ? _value.SPORT_ID
-          : SPORT_ID // ignore: cast_nullable_to_non_nullable
+      sportId: null == sportId
+          ? _value.sportId
+          : sportId // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_NAME_1: null == CATEGORY_NAME_1
-          ? _value.CATEGORY_NAME_1
-          : CATEGORY_NAME_1 // ignore: cast_nullable_to_non_nullable
+      categoryName1: null == categoryName1
+          ? _value.categoryName1
+          : categoryName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      CATEGORY_ID_1: null == CATEGORY_ID_1
-          ? _value.CATEGORY_ID_1
-          : CATEGORY_ID_1 // ignore: cast_nullable_to_non_nullable
+      categoryId1: null == categoryId1
+          ? _value.categoryId1
+          : categoryId1 // ignore: cast_nullable_to_non_nullable
               as int,
-      CATEGORY_NAME_2: null == CATEGORY_NAME_2
-          ? _value.CATEGORY_NAME_2
-          : CATEGORY_NAME_2 // ignore: cast_nullable_to_non_nullable
+      categoryName2: null == categoryName2
+          ? _value.categoryName2
+          : categoryName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      CATEGORY_NAME_3: null == CATEGORY_NAME_3
-          ? _value.CATEGORY_NAME_3
-          : CATEGORY_NAME_3 // ignore: cast_nullable_to_non_nullable
+      categoryName3: null == categoryName3
+          ? _value.categoryName3
+          : categoryName3 // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -173,33 +173,33 @@ class __$$_EventSnapshotExtrasCopyWithImpl<$Res>
 
 class _$_EventSnapshotExtras extends _EventSnapshotExtras {
   _$_EventSnapshotExtras(
-      {required this.CATEGORY_ID_3,
-      required this.CATEGORY_ID_2,
-      required this.SPORT_ID,
-      required this.CATEGORY_NAME_1,
-      required this.CATEGORY_ID_1,
-      required this.CATEGORY_NAME_2,
-      required this.CATEGORY_NAME_3})
+      {required this.categoryId3,
+      required this.categoryId2,
+      required this.sportId,
+      required this.categoryName1,
+      required this.categoryId1,
+      required this.categoryName2,
+      required this.categoryName3})
       : super._();
 
   @override
-  final int CATEGORY_ID_3;
+  final int categoryId3;
   @override
-  final int CATEGORY_ID_2;
+  final int categoryId2;
   @override
-  final int SPORT_ID;
+  final int sportId;
   @override
-  final String CATEGORY_NAME_1;
+  final String categoryName1;
   @override
-  final int CATEGORY_ID_1;
+  final int categoryId1;
   @override
-  final String CATEGORY_NAME_2;
+  final String categoryName2;
   @override
-  final String CATEGORY_NAME_3;
+  final String categoryName3;
 
   @override
   String toString() {
-    return 'EventSnapshotExtras(CATEGORY_ID_3: $CATEGORY_ID_3, CATEGORY_ID_2: $CATEGORY_ID_2, SPORT_ID: $SPORT_ID, CATEGORY_NAME_1: $CATEGORY_NAME_1, CATEGORY_ID_1: $CATEGORY_ID_1, CATEGORY_NAME_2: $CATEGORY_NAME_2, CATEGORY_NAME_3: $CATEGORY_NAME_3)';
+    return 'EventSnapshotExtras(categoryId3: $categoryId3, categoryId2: $categoryId2, sportId: $sportId, categoryName1: $categoryName1, categoryId1: $categoryId1, categoryName2: $categoryName2, categoryName3: $categoryName3)';
   }
 
   @override
@@ -207,32 +207,24 @@ class _$_EventSnapshotExtras extends _EventSnapshotExtras {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EventSnapshotExtras &&
-            (identical(other.CATEGORY_ID_3, CATEGORY_ID_3) ||
-                other.CATEGORY_ID_3 == CATEGORY_ID_3) &&
-            (identical(other.CATEGORY_ID_2, CATEGORY_ID_2) ||
-                other.CATEGORY_ID_2 == CATEGORY_ID_2) &&
-            (identical(other.SPORT_ID, SPORT_ID) ||
-                other.SPORT_ID == SPORT_ID) &&
-            (identical(other.CATEGORY_NAME_1, CATEGORY_NAME_1) ||
-                other.CATEGORY_NAME_1 == CATEGORY_NAME_1) &&
-            (identical(other.CATEGORY_ID_1, CATEGORY_ID_1) ||
-                other.CATEGORY_ID_1 == CATEGORY_ID_1) &&
-            (identical(other.CATEGORY_NAME_2, CATEGORY_NAME_2) ||
-                other.CATEGORY_NAME_2 == CATEGORY_NAME_2) &&
-            (identical(other.CATEGORY_NAME_3, CATEGORY_NAME_3) ||
-                other.CATEGORY_NAME_3 == CATEGORY_NAME_3));
+            (identical(other.categoryId3, categoryId3) ||
+                other.categoryId3 == categoryId3) &&
+            (identical(other.categoryId2, categoryId2) ||
+                other.categoryId2 == categoryId2) &&
+            (identical(other.sportId, sportId) || other.sportId == sportId) &&
+            (identical(other.categoryName1, categoryName1) ||
+                other.categoryName1 == categoryName1) &&
+            (identical(other.categoryId1, categoryId1) ||
+                other.categoryId1 == categoryId1) &&
+            (identical(other.categoryName2, categoryName2) ||
+                other.categoryName2 == categoryName2) &&
+            (identical(other.categoryName3, categoryName3) ||
+                other.categoryName3 == categoryName3));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      CATEGORY_ID_3,
-      CATEGORY_ID_2,
-      SPORT_ID,
-      CATEGORY_NAME_1,
-      CATEGORY_ID_1,
-      CATEGORY_NAME_2,
-      CATEGORY_NAME_3);
+  int get hashCode => Object.hash(runtimeType, categoryId3, categoryId2,
+      sportId, categoryName1, categoryId1, categoryName2, categoryName3);
 
   @JsonKey(ignore: true)
   @override
@@ -244,29 +236,29 @@ class _$_EventSnapshotExtras extends _EventSnapshotExtras {
 
 abstract class _EventSnapshotExtras extends EventSnapshotExtras {
   factory _EventSnapshotExtras(
-      {required final int CATEGORY_ID_3,
-      required final int CATEGORY_ID_2,
-      required final int SPORT_ID,
-      required final String CATEGORY_NAME_1,
-      required final int CATEGORY_ID_1,
-      required final String CATEGORY_NAME_2,
-      required final String CATEGORY_NAME_3}) = _$_EventSnapshotExtras;
+      {required final int categoryId3,
+      required final int categoryId2,
+      required final int sportId,
+      required final String categoryName1,
+      required final int categoryId1,
+      required final String categoryName2,
+      required final String categoryName3}) = _$_EventSnapshotExtras;
   _EventSnapshotExtras._() : super._();
 
   @override
-  int get CATEGORY_ID_3;
+  int get categoryId3;
   @override
-  int get CATEGORY_ID_2;
+  int get categoryId2;
   @override
-  int get SPORT_ID;
+  int get sportId;
   @override
-  String get CATEGORY_NAME_1;
+  String get categoryName1;
   @override
-  int get CATEGORY_ID_1;
+  int get categoryId1;
   @override
-  String get CATEGORY_NAME_2;
+  String get categoryName2;
   @override
-  String get CATEGORY_NAME_3;
+  String get categoryName3;
   @override
   @JsonKey(ignore: true)
   _$$_EventSnapshotExtrasCopyWith<_$_EventSnapshotExtras> get copyWith =>

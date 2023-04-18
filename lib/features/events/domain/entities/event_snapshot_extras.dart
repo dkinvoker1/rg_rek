@@ -7,12 +7,12 @@ class EventSnapshotExtras with _$EventSnapshotExtras {
   const EventSnapshotExtras._();
 
   factory EventSnapshotExtras({
-    required int CATEGORY_ID_3,
-    required int CATEGORY_ID_2,
-    required int SPORT_ID,
-    required String CATEGORY_NAME_1,
-    required int CATEGORY_ID_1,
-    required String CATEGORY_NAME_2,
-    required String CATEGORY_NAME_3,
+    required int categoryId3,
+    required int categoryId2,
+    required int sportId,
+    required String categoryName1,
+    required int categoryId1,
+    required String categoryName2,
+    required String categoryName3,
   }) = _EventSnapshotExtras;
 }
