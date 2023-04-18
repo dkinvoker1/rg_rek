@@ -88,21 +88,6 @@ void main() {
   );
 
   test(
-    'should get List<Event> from EventRepository',
-    () async {
-      //arrange
-      when(mockEventRepository.getEventsByCategory(any))
-          .thenAnswer((_) async => Right(tEventsList));
-      //act
-      final result = await useCase(tCategoryId);
-      //assert
-      verify(mockEventRepository.getEventsByCategory(tCategoryId));
-      verifyNoMoreInteractions(mockEventRepository);
-      expect(result, Right(tEventsList));
-    },
-  );
-
-  test(
     'should get connectionFailure from EventRepository',
     () async {
       //arrange

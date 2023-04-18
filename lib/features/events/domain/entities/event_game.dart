@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'game_outcome.dart';
 
 part 'event_game.freezed.dart';
