@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../data/models/event_model.dart';
 import 'event_extended_data.dart';
 import 'event_game.dart';
 
@@ -26,4 +27,26 @@ class Event with _$Event {
     required List<EventExtendedData> eventExtendedData,
     required List<EventGame> eventGames,
   }) = _Event;
+
+  factory Event.fromModel(EventModel model) {
+    return Event(
+      category1Id: model.category1Id,
+      category1Name: model.category1Name,
+      category2Id: model.category2Id,
+      category2Name: model.category2Name,
+      category3Id: model.category3Id,
+      category3Name: model.category3Name,
+      eventCodeId: model.eventCodeId,
+      eventId: model.eventId,
+      eventName: model.eventName,
+      eventStart: model.eventStart,
+      eventType: model.eventType,
+      gamesCount: model.gamesCount,
+      remoteId: model.remoteId,
+      eventExtendedData: model.eventExtendedData
+          .map((e) => EventExtendedData.fromModel(e))
+          .toList(),
+      eventGames: model.eventGames.map((e) => EventGame.fromModel(e)).toList(),
+    );
+  }
 }
