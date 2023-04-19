@@ -39,12 +39,12 @@ class MockNetworkInfo extends _i1.Mock implements _i2.NetworkInfo {
       ) as _i3.Future<bool>);
 }
 
-/// A class which mocks [EventRemoteDataSource].
+/// A class which mocks [RemoteEventDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockEventRemoteDataSource extends _i1.Mock
-    implements _i4.EventRemoteDataSource {
-  MockEventRemoteDataSource() {
+class MockRemoteEventDataSource extends _i1.Mock
+    implements _i4.RemoteEventDataSource {
+  MockRemoteEventDataSource() {
     _i1.throwOnMissingStub(this);
   }
 

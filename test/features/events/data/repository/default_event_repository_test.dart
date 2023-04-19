@@ -20,15 +20,15 @@ import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
 
 import 'default_event_repository_test.mocks.dart';
 
-@GenerateMocks([NetworkInfo, EventRemoteDataSource])
+@GenerateMocks([NetworkInfo, RemoteEventDataSource])
 void main() {
   late MockNetworkInfo mockNetworkInfo;
-  late MockEventRemoteDataSource mockRemoteDataSource;
+  late MockRemoteEventDataSource mockRemoteDataSource;
   late DefaultEventRepository repository;
 
   setUp(() {
     mockNetworkInfo = MockNetworkInfo();
-    mockRemoteDataSource = MockEventRemoteDataSource();
+    mockRemoteDataSource = MockRemoteEventDataSource();
     repository = DefaultEventRepository(
         networkInfo: mockNetworkInfo, remoteDataSource: mockRemoteDataSource);
   });

@@ -1,14 +1,15 @@
-import 'package:rg_rek/core/network_info/network_info.dart';
-import 'package:rg_rek/features/events/data/data_sources/remote/remote_event_data_source.dart';
-import 'package:rg_rek/features/events/domain/entities/event_snapshot.dart';
-import 'package:rg_rek/features/events/domain/entities/event.dart';
-import 'package:rg_rek/core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:rg_rek/features/events/domain/repositories/event_repository.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/network_info/network_info.dart';
+import '../../domain/entities/event.dart';
+import '../../domain/entities/event_snapshot.dart';
+import '../../domain/repositories/event_repository.dart';
+import '../data_sources/remote/remote_event_data_source.dart';
 
 class DefaultEventRepository implements EventRepository {
   final NetworkInfo networkInfo;
-  final EventRemoteDataSource remoteDataSource;
+  final RemoteEventDataSource remoteDataSource;
 
   DefaultEventRepository({
     required this.networkInfo,

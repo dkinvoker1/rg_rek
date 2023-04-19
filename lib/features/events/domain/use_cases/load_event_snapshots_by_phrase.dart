@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:rg_rek/features/events/domain/entities/event_snapshot.dart';
 
 import '../../../../core/domain/use_case.dart';
 import '../../../../core/errors/failures.dart';
+import '../entities/event_snapshot.dart';
 import '../repositories/event_repository.dart';
 
 class LoadEventSnapshotsByPhrase
