@@ -20,7 +20,7 @@ void main() {
     useCase = LoadEventSnapshotsByPhrase(mockEventRepository);
   });
 
-  const tPhrase = 'abc';
+  const tPhrase = 'nam';
   final tEventSnapshots = [
     EventSnapshot(
       area: 1,
