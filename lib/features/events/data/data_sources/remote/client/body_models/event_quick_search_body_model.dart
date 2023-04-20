@@ -18,7 +18,7 @@ class EventQuickSearchBodyModel with _$EventQuickSearchBodyModel {
 
 enum Area {
   CATEGORY,
-  // LIVE,
+  LIVE_EVENT,
   PREMATCH_EVENT,
 }
 

@@ -1,14 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rg_rek/features/events/domain/entities/event_snapshot.dart';
-import 'package:rg_rek/features/events/domain/use_cases/load_event_snapshots_by_phrase.dart';
+import '../../../../domain/entities/event_snapshot.dart';
+import '../../../../domain/use_cases/load_event_snapshots_by_phrase.dart';
+
+import '../../../../../../core/errors/failures.dart';
 
 part 'quick_search_event.dart';
 part 'quick_search_state.dart';
 part 'quick_search_bloc.freezed.dart';
-
-const String serverFailureString = 'Server Failure';
-const String connectionFailureString = 'Connection Failure';
 
 class QuickSearchBloc extends Bloc<QuickSearchEvent, QuickSearchState> {
   final LoadEventSnapshotsByPhrase loadEventSnapshotsByPhrase;
@@ -22,10 +21,12 @@ class QuickSearchBloc extends Bloc<QuickSearchEvent, QuickSearchState> {
 
       eventSnapshotsList.fold(
         (failure) => failure.when(
-          serverFailure: (_) =>
-              emit(const QuickSearchState.error(serverFailureString)),
-          connectionFailure: (_) =>
-              emit(const QuickSearchState.error(connectionFailureString)),
+          serverFailure: (_) => emit(
+            const QuickSearchState.error(serverFailureString),
+          ),
+          connectionFailure: (_) => emit(
+            const QuickSearchState.error(connectionFailureString),
+          ),
         ),
         (succes) => succes.isNotEmpty
             ? emit(QuickSearchState.loaded(succes))
