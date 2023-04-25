@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
@@ -17,70 +18,68 @@ class MyEventsBloc extends Bloc<MyEventsEvent, MyEventsState> {
 
   MyEventsBloc(this.loadEventsByCategory)
       : super(const MyEventsState.initial()) {
-    on<_Load>(
-      (event, emit) async {
-        emit(const MyEventsState.loading());
+    on<_Load>(_loadHandle);
+    on<_ExpandCategory>(_expandCategoryHandle);
+    on<_FilterByCategory>(_filterByCategoryHandle);
+  }
 
-        var categoriesString = EventCategory.values.fold(
-          '',
-          (previousValue, element) => '$previousValue,${element.value}',
-        );
-        categoriesString = categoriesString.replaceFirst(',', '');
-
-        var events = await loadEventsByCategory(categoriesString);
-
-        events.fold(
-          (failure) => failure.when(
-            serverFailure: (_) => emit(
-              MyEventsState.error(serverFailureString),
-            ),
-            connectionFailure: (_) => emit(
-              MyEventsState.error(connectionFailureString),
-            ),
-          ),
-          (succes) => succes.isNotEmpty
-              ? emit(MyEventsState.loaded(sortEvents(succes), null))
-              : emit(const MyEventsState.loadedEmpty()),
-        );
+  FutureOr<void> _filterByCategoryHandle(event, emit) async {
+    state.mapOrNull(
+      loaded: (value) {
+        emit(MyEventsState.loaded(
+          value.eventsByCategory,
+          event.category,
+        ));
       },
     );
+  }
 
-    on<_ExpandCategory>(
-      (event, emit) async {
-        state.mapOrNull(
-          loaded: (value) {
-            var eventsByCategory = value.eventsByCategory
-                .map(
-                  (e) => e.copyWith(
-                    isExpanded: event.category == e.eventCategory
-                        ? !e.isExpanded
-                        : e.isExpanded,
-                  ),
-                )
-                .toList();
-
-            emit(
-              MyEventsState.loaded(
-                eventsByCategory,
-                value.filterByCategory,
+  FutureOr<void> _expandCategoryHandle(event, emit) async {
+    state.mapOrNull(
+      loaded: (value) {
+        var eventsByCategory = value.eventsByCategory
+            .map(
+              (e) => e.copyWith(
+                isExpanded: event.category == e.eventCategory
+                    ? !e.isExpanded
+                    : e.isExpanded,
               ),
-            );
-          },
+            )
+            .toList();
+
+        emit(
+          MyEventsState.loaded(
+            eventsByCategory,
+            value.filterByCategory,
+          ),
         );
       },
     );
+  }
 
-    on<_FilterByCategory>(
-      (event, emit) async {
-        state.mapOrNull(
-          loaded: (value) {
-            emit(MyEventsState.loaded(
-              value.eventsByCategory,
-              event.category,
-            ));
-          },
-        );
-      },
+  FutureOr<void> _loadHandle(event, emit) async {
+    emit(const MyEventsState.loading());
+
+    var categoriesString = EventCategory.values.fold(
+      '',
+      (previousValue, element) => '$previousValue,${element.value}',
+    );
+    categoriesString = categoriesString.replaceFirst(',', '');
+
+    var events = await loadEventsByCategory(categoriesString);
+
+    events.fold(
+      (failure) => failure.when(
+        serverFailure: (_) => emit(
+          MyEventsState.error(serverFailureString),
+        ),
+        connectionFailure: (_) => emit(
+          MyEventsState.error(connectionFailureString),
+        ),
+      ),
+      (succes) => succes.isNotEmpty
+          ? emit(MyEventsState.loaded(sortEvents(succes), null))
+          : emit(const MyEventsState.loadedEmpty()),
     );
   }
 

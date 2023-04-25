@@ -6,23 +6,14 @@ part 'event_quick_search_body_model.freezed.dart';
 part 'event_quick_search_body_model.g.dart';
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class EventQuickSearchBodyModel with _$EventQuickSearchBodyModel {
   factory EventQuickSearchBodyModel({
-    @Default(Area.values) List<Area> areas,
+    @Default(['PREMATCH_EVENT']) List<String> areas,
     @Default('pl') String languageCode,
-    @Default(Mode.values) List<Mode> modes,
+    @Default(['INFIX', 'PREFIX']) List<String> modes,
     required String pattern,
   }) = _EventQuickSearchBodyModel;
-}
 
-enum Area {
-  CATEGORY,
-  // LIVE,
-  PREMATCH_EVENT,
-}
-
-enum Mode {
-  INFIX,
-  PREFIX,
+  factory EventQuickSearchBodyModel.fromJson(Map<String, Object?> json) =>
+      _$EventQuickSearchBodyModelFromJson(json);
 }

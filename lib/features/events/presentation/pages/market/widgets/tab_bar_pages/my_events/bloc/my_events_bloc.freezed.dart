@@ -1784,7 +1784,7 @@ mixin _$GameCardData {
   String get category2Name => throw _privateConstructorUsedError;
   int get category3Id => throw _privateConstructorUsedError;
   String get category3Name => throw _privateConstructorUsedError;
-  DateTime get eventStart => throw _privateConstructorUsedError;
+  DateTime? get eventStart => throw _privateConstructorUsedError;
   List<SelectableOutcome> get outcomes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -1806,7 +1806,7 @@ abstract class $GameCardDataCopyWith<$Res> {
       String category2Name,
       int category3Id,
       String category3Name,
-      DateTime eventStart,
+      DateTime? eventStart,
       List<SelectableOutcome> outcomes});
 }
 
@@ -1830,7 +1830,7 @@ class _$GameCardDataCopyWithImpl<$Res, $Val extends GameCardData>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventStart = null,
+    Object? eventStart = freezed,
     Object? outcomes = null,
   }) {
     return _then(_value.copyWith(
@@ -1862,10 +1862,10 @@ class _$GameCardDataCopyWithImpl<$Res, $Val extends GameCardData>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventStart: null == eventStart
+      eventStart: freezed == eventStart
           ? _value.eventStart
           : eventStart // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       outcomes: null == outcomes
           ? _value.outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -1890,7 +1890,7 @@ abstract class _$$_GameCardDataCopyWith<$Res>
       String category2Name,
       int category3Id,
       String category3Name,
-      DateTime eventStart,
+      DateTime? eventStart,
       List<SelectableOutcome> outcomes});
 }
 
@@ -1912,7 +1912,7 @@ class __$$_GameCardDataCopyWithImpl<$Res>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventStart = null,
+    Object? eventStart = freezed,
     Object? outcomes = null,
   }) {
     return _then(_$_GameCardData(
@@ -1944,10 +1944,10 @@ class __$$_GameCardDataCopyWithImpl<$Res>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventStart: null == eventStart
+      eventStart: freezed == eventStart
           ? _value.eventStart
           : eventStart // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       outcomes: null == outcomes
           ? _value._outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -1987,7 +1987,7 @@ class _$_GameCardData extends _GameCardData {
   @override
   final String category3Name;
   @override
-  final DateTime eventStart;
+  final DateTime? eventStart;
   final List<SelectableOutcome> _outcomes;
   @override
   List<SelectableOutcome> get outcomes {
@@ -2054,7 +2054,7 @@ abstract class _GameCardData extends GameCardData {
       required final String category2Name,
       required final int category3Id,
       required final String category3Name,
-      required final DateTime eventStart,
+      required final DateTime? eventStart,
       required final List<SelectableOutcome> outcomes}) = _$_GameCardData;
   _GameCardData._() : super._();
 
@@ -2073,7 +2073,7 @@ abstract class _GameCardData extends GameCardData {
   @override
   String get category3Name;
   @override
-  DateTime get eventStart;
+  DateTime? get eventStart;
   @override
   List<SelectableOutcome> get outcomes;
   @override

@@ -70,10 +70,11 @@ final tSnapshotModelList = [
 ];
 
 final tEventSnapshotModel = EventSnapshotModel(
-  area: 1,
+  area: '1',
   name: 'Mad footbal',
   id: 1,
   score: 1.1,
+  eventStart: null,
   extras: tEventSnapshotExtrasModel,
 );
 

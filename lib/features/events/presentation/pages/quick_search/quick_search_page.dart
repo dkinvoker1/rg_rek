@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/service_locator.dart';
+import '../../../../../core/widgets/loading_widget.dart.dart';
+import '../market/widgets/tab_bar_pages/my_events/widgets/exception_widget.dart';
 import 'bloc/quick_search_bloc.dart';
+import 'widgets/widgets.dart';
 // import 'widgets/widgets.dart';
 
 @RoutePage()
@@ -30,23 +33,32 @@ class QuickSearchView extends StatefulWidget {
 
 class _QuickSearchViewState extends State<QuickSearchView> {
   @override
-  Widget build(BuildContext context) =>
-      BlocBuilder<QuickSearchBloc, QuickSearchState>(
-        builder: (context, state) {
-          return const Text('data');
-
-          // state.maybeWhen(
-          //   initial: () => const LoadingWidget(),
-          //   loading: () => const LoadingWidget(),
-          //   loaded: (strangeMindsList) => StrangeMindsListWidget(
-          //     strangeMindsList: strangeMindsList,
-          //   ),
-          //   loadedEmpty: () => const LoadedEmptyWidget(),
-          //   error: (errorMessage) => ErrorDisplayWidget(
-          //     message: errorMessage,
-          //   ),
-          //   orElse: () => const SizedBox.shrink(),
-          // );
-        },
-      );
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          const HeaderWidget(),
+          const SearchWidget(),
+          Expanded(
+            child: BlocBuilder<QuickSearchBloc, QuickSearchState>(
+              builder: (context, state) {
+                return state.maybeWhen(
+                  initial: () => const InitialWidget(),
+                  loading: () => const LoadingWidget(),
+                  loaded: (games) => LoadedWidget(
+                    games: games,
+                  ),
+                  loadedEmpty: () => const LoadedEmptyWidget(),
+                  error: (errorMessage) => ExceptionWidget(
+                    message: errorMessage,
+                  ),
+                  orElse: () => const SizedBox.shrink(),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

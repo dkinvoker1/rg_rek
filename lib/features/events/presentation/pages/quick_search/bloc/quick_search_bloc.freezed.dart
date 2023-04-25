@@ -225,7 +225,7 @@ mixin _$QuickSearchState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) =>
@@ -234,7 +234,7 @@ mixin _$QuickSearchState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) =>
@@ -243,7 +243,7 @@ mixin _$QuickSearchState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -251,29 +251,29 @@ mixin _$QuickSearchState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -298,25 +298,24 @@ class _$QuickSearchStateCopyWithImpl<$Res, $Val extends QuickSearchState>
 }
 
 /// @nodoc
-abstract class _$$_QuickSearchInitialCopyWith<$Res> {
-  factory _$$_QuickSearchInitialCopyWith(_$_QuickSearchInitial value,
-          $Res Function(_$_QuickSearchInitial) then) =
-      __$$_QuickSearchInitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_QuickSearchInitialCopyWithImpl<$Res>
-    extends _$QuickSearchStateCopyWithImpl<$Res, _$_QuickSearchInitial>
-    implements _$$_QuickSearchInitialCopyWith<$Res> {
-  __$$_QuickSearchInitialCopyWithImpl(
-      _$_QuickSearchInitial _value, $Res Function(_$_QuickSearchInitial) _then)
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$QuickSearchStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_QuickSearchInitial implements _QuickSearchInitial {
-  const _$_QuickSearchInitial();
+class _$_Initial implements _Initial {
+  const _$_Initial();
 
   @override
   String toString() {
@@ -326,7 +325,7 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_QuickSearchInitial);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -337,7 +336,7 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) {
@@ -349,7 +348,7 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) {
@@ -361,7 +360,7 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -375,11 +374,11 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) {
     return initial(this);
   }
@@ -387,11 +386,11 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -399,11 +398,11 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -413,30 +412,29 @@ class _$_QuickSearchInitial implements _QuickSearchInitial {
   }
 }
 
-abstract class _QuickSearchInitial implements QuickSearchState {
-  const factory _QuickSearchInitial() = _$_QuickSearchInitial;
+abstract class _Initial implements QuickSearchState {
+  const factory _Initial() = _$_Initial;
 }
 
 /// @nodoc
-abstract class _$$_QuickSearchLoadingCopyWith<$Res> {
-  factory _$$_QuickSearchLoadingCopyWith(_$_QuickSearchLoading value,
-          $Res Function(_$_QuickSearchLoading) then) =
-      __$$_QuickSearchLoadingCopyWithImpl<$Res>;
+abstract class _$$_LoadingCopyWith<$Res> {
+  factory _$$_LoadingCopyWith(
+          _$_Loading value, $Res Function(_$_Loading) then) =
+      __$$_LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_QuickSearchLoadingCopyWithImpl<$Res>
-    extends _$QuickSearchStateCopyWithImpl<$Res, _$_QuickSearchLoading>
-    implements _$$_QuickSearchLoadingCopyWith<$Res> {
-  __$$_QuickSearchLoadingCopyWithImpl(
-      _$_QuickSearchLoading _value, $Res Function(_$_QuickSearchLoading) _then)
+class __$$_LoadingCopyWithImpl<$Res>
+    extends _$QuickSearchStateCopyWithImpl<$Res, _$_Loading>
+    implements _$$_LoadingCopyWith<$Res> {
+  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_QuickSearchLoading implements _QuickSearchLoading {
-  const _$_QuickSearchLoading();
+class _$_Loading implements _Loading {
+  const _$_Loading();
 
   @override
   String toString() {
@@ -446,7 +444,7 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_QuickSearchLoading);
+        (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
   @override
@@ -457,7 +455,7 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) {
@@ -469,7 +467,7 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) {
@@ -481,7 +479,7 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -495,11 +493,11 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) {
     return loading(this);
   }
@@ -507,11 +505,11 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -519,11 +517,11 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -533,90 +531,85 @@ class _$_QuickSearchLoading implements _QuickSearchLoading {
   }
 }
 
-abstract class _QuickSearchLoading implements QuickSearchState {
-  const factory _QuickSearchLoading() = _$_QuickSearchLoading;
+abstract class _Loading implements QuickSearchState {
+  const factory _Loading() = _$_Loading;
 }
 
 /// @nodoc
-abstract class _$$_QuickSearchLoadedCopyWith<$Res> {
-  factory _$$_QuickSearchLoadedCopyWith(_$_QuickSearchLoaded value,
-          $Res Function(_$_QuickSearchLoaded) then) =
-      __$$_QuickSearchLoadedCopyWithImpl<$Res>;
+abstract class _$$_LoadedCopyWith<$Res> {
+  factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
+      __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<EventSnapshot> eventsList});
+  $Res call({List<GameCardData> games});
 }
 
 /// @nodoc
-class __$$_QuickSearchLoadedCopyWithImpl<$Res>
-    extends _$QuickSearchStateCopyWithImpl<$Res, _$_QuickSearchLoaded>
-    implements _$$_QuickSearchLoadedCopyWith<$Res> {
-  __$$_QuickSearchLoadedCopyWithImpl(
-      _$_QuickSearchLoaded _value, $Res Function(_$_QuickSearchLoaded) _then)
+class __$$_LoadedCopyWithImpl<$Res>
+    extends _$QuickSearchStateCopyWithImpl<$Res, _$_Loaded>
+    implements _$$_LoadedCopyWith<$Res> {
+  __$$_LoadedCopyWithImpl(_$_Loaded _value, $Res Function(_$_Loaded) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? eventsList = null,
+    Object? games = null,
   }) {
-    return _then(_$_QuickSearchLoaded(
-      null == eventsList
-          ? _value._eventsList
-          : eventsList // ignore: cast_nullable_to_non_nullable
-              as List<EventSnapshot>,
+    return _then(_$_Loaded(
+      null == games
+          ? _value._games
+          : games // ignore: cast_nullable_to_non_nullable
+              as List<GameCardData>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_QuickSearchLoaded implements _QuickSearchLoaded {
-  const _$_QuickSearchLoaded(final List<EventSnapshot> eventsList)
-      : _eventsList = eventsList;
+class _$_Loaded implements _Loaded {
+  const _$_Loaded(final List<GameCardData> games) : _games = games;
 
-  final List<EventSnapshot> _eventsList;
+  final List<GameCardData> _games;
   @override
-  List<EventSnapshot> get eventsList {
-    if (_eventsList is EqualUnmodifiableListView) return _eventsList;
+  List<GameCardData> get games {
+    if (_games is EqualUnmodifiableListView) return _games;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_eventsList);
+    return EqualUnmodifiableListView(_games);
   }
 
   @override
   String toString() {
-    return 'QuickSearchState.loaded(eventsList: $eventsList)';
+    return 'QuickSearchState.loaded(games: $games)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuickSearchLoaded &&
-            const DeepCollectionEquality()
-                .equals(other._eventsList, _eventsList));
+            other is _$_Loaded &&
+            const DeepCollectionEquality().equals(other._games, _games));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_eventsList));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_games));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuickSearchLoadedCopyWith<_$_QuickSearchLoaded> get copyWith =>
-      __$$_QuickSearchLoadedCopyWithImpl<_$_QuickSearchLoaded>(
-          this, _$identity);
+  _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
+      __$$_LoadedCopyWithImpl<_$_Loaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) {
-    return loaded(eventsList);
+    return loaded(games);
   }
 
   @override
@@ -624,11 +617,11 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) {
-    return loaded?.call(eventsList);
+    return loaded?.call(games);
   }
 
   @override
@@ -636,13 +629,13 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(eventsList);
+      return loaded(games);
     }
     return orElse();
   }
@@ -650,11 +643,11 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) {
     return loaded(this);
   }
@@ -662,11 +655,11 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
   }
@@ -674,11 +667,11 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -688,36 +681,33 @@ class _$_QuickSearchLoaded implements _QuickSearchLoaded {
   }
 }
 
-abstract class _QuickSearchLoaded implements QuickSearchState {
-  const factory _QuickSearchLoaded(final List<EventSnapshot> eventsList) =
-      _$_QuickSearchLoaded;
+abstract class _Loaded implements QuickSearchState {
+  const factory _Loaded(final List<GameCardData> games) = _$_Loaded;
 
-  List<EventSnapshot> get eventsList;
+  List<GameCardData> get games;
   @JsonKey(ignore: true)
-  _$$_QuickSearchLoadedCopyWith<_$_QuickSearchLoaded> get copyWith =>
+  _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_QuickSearchEmptyCopyWith<$Res> {
-  factory _$$_QuickSearchEmptyCopyWith(
-          _$_QuickSearchEmpty value, $Res Function(_$_QuickSearchEmpty) then) =
-      __$$_QuickSearchEmptyCopyWithImpl<$Res>;
+abstract class _$$_EmptyCopyWith<$Res> {
+  factory _$$_EmptyCopyWith(_$_Empty value, $Res Function(_$_Empty) then) =
+      __$$_EmptyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_QuickSearchEmptyCopyWithImpl<$Res>
-    extends _$QuickSearchStateCopyWithImpl<$Res, _$_QuickSearchEmpty>
-    implements _$$_QuickSearchEmptyCopyWith<$Res> {
-  __$$_QuickSearchEmptyCopyWithImpl(
-      _$_QuickSearchEmpty _value, $Res Function(_$_QuickSearchEmpty) _then)
+class __$$_EmptyCopyWithImpl<$Res>
+    extends _$QuickSearchStateCopyWithImpl<$Res, _$_Empty>
+    implements _$$_EmptyCopyWith<$Res> {
+  __$$_EmptyCopyWithImpl(_$_Empty _value, $Res Function(_$_Empty) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_QuickSearchEmpty implements _QuickSearchEmpty {
-  const _$_QuickSearchEmpty();
+class _$_Empty implements _Empty {
+  const _$_Empty();
 
   @override
   String toString() {
@@ -727,7 +717,7 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_QuickSearchEmpty);
+        (other.runtimeType == runtimeType && other is _$_Empty);
   }
 
   @override
@@ -738,7 +728,7 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) {
@@ -750,7 +740,7 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) {
@@ -762,7 +752,7 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -776,11 +766,11 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) {
     return loadedEmpty(this);
   }
@@ -788,11 +778,11 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) {
     return loadedEmpty?.call(this);
   }
@@ -800,11 +790,11 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (loadedEmpty != null) {
@@ -814,25 +804,23 @@ class _$_QuickSearchEmpty implements _QuickSearchEmpty {
   }
 }
 
-abstract class _QuickSearchEmpty implements QuickSearchState {
-  const factory _QuickSearchEmpty() = _$_QuickSearchEmpty;
+abstract class _Empty implements QuickSearchState {
+  const factory _Empty() = _$_Empty;
 }
 
 /// @nodoc
-abstract class _$$_QuickSearchErrorCopyWith<$Res> {
-  factory _$$_QuickSearchErrorCopyWith(
-          _$_QuickSearchError value, $Res Function(_$_QuickSearchError) then) =
-      __$$_QuickSearchErrorCopyWithImpl<$Res>;
+abstract class _$$_ErrorCopyWith<$Res> {
+  factory _$$_ErrorCopyWith(_$_Error value, $Res Function(_$_Error) then) =
+      __$$_ErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$_QuickSearchErrorCopyWithImpl<$Res>
-    extends _$QuickSearchStateCopyWithImpl<$Res, _$_QuickSearchError>
-    implements _$$_QuickSearchErrorCopyWith<$Res> {
-  __$$_QuickSearchErrorCopyWithImpl(
-      _$_QuickSearchError _value, $Res Function(_$_QuickSearchError) _then)
+class __$$_ErrorCopyWithImpl<$Res>
+    extends _$QuickSearchStateCopyWithImpl<$Res, _$_Error>
+    implements _$$_ErrorCopyWith<$Res> {
+  __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -840,7 +828,7 @@ class __$$_QuickSearchErrorCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$_QuickSearchError(
+    return _then(_$_Error(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -851,8 +839,8 @@ class __$$_QuickSearchErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_QuickSearchError implements _QuickSearchError {
-  const _$_QuickSearchError(this.message);
+class _$_Error implements _Error {
+  const _$_Error(this.message);
 
   @override
   final String message;
@@ -866,7 +854,7 @@ class _$_QuickSearchError implements _QuickSearchError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuickSearchError &&
+            other is _$_Error &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -876,15 +864,15 @@ class _$_QuickSearchError implements _QuickSearchError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuickSearchErrorCopyWith<_$_QuickSearchError> get copyWith =>
-      __$$_QuickSearchErrorCopyWithImpl<_$_QuickSearchError>(this, _$identity);
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      __$$_ErrorCopyWithImpl<_$_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<EventSnapshot> eventsList) loaded,
+    required TResult Function(List<GameCardData> games) loaded,
     required TResult Function() loadedEmpty,
     required TResult Function(String message) error,
   }) {
@@ -896,7 +884,7 @@ class _$_QuickSearchError implements _QuickSearchError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<EventSnapshot> eventsList)? loaded,
+    TResult? Function(List<GameCardData> games)? loaded,
     TResult? Function()? loadedEmpty,
     TResult? Function(String message)? error,
   }) {
@@ -908,7 +896,7 @@ class _$_QuickSearchError implements _QuickSearchError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<EventSnapshot> eventsList)? loaded,
+    TResult Function(List<GameCardData> games)? loaded,
     TResult Function()? loadedEmpty,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -922,11 +910,11 @@ class _$_QuickSearchError implements _QuickSearchError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_QuickSearchInitial value) initial,
-    required TResult Function(_QuickSearchLoading value) loading,
-    required TResult Function(_QuickSearchLoaded value) loaded,
-    required TResult Function(_QuickSearchEmpty value) loadedEmpty,
-    required TResult Function(_QuickSearchError value) error,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Empty value) loadedEmpty,
+    required TResult Function(_Error value) error,
   }) {
     return error(this);
   }
@@ -934,11 +922,11 @@ class _$_QuickSearchError implements _QuickSearchError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_QuickSearchInitial value)? initial,
-    TResult? Function(_QuickSearchLoading value)? loading,
-    TResult? Function(_QuickSearchLoaded value)? loaded,
-    TResult? Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult? Function(_QuickSearchError value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Empty value)? loadedEmpty,
+    TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
   }
@@ -946,11 +934,11 @@ class _$_QuickSearchError implements _QuickSearchError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_QuickSearchInitial value)? initial,
-    TResult Function(_QuickSearchLoading value)? loading,
-    TResult Function(_QuickSearchLoaded value)? loaded,
-    TResult Function(_QuickSearchEmpty value)? loadedEmpty,
-    TResult Function(_QuickSearchError value)? error,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Empty value)? loadedEmpty,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -960,11 +948,11 @@ class _$_QuickSearchError implements _QuickSearchError {
   }
 }
 
-abstract class _QuickSearchError implements QuickSearchState {
-  const factory _QuickSearchError(final String message) = _$_QuickSearchError;
+abstract class _Error implements QuickSearchState {
+  const factory _Error(final String message) = _$_Error;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$_QuickSearchErrorCopyWith<_$_QuickSearchError> get copyWith =>
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
       throw _privateConstructorUsedError;
 }

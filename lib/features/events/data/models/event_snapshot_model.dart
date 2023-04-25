@@ -10,10 +10,11 @@ class EventSnapshotModel with _$EventSnapshotModel {
   const EventSnapshotModel._();
 
   factory EventSnapshotModel({
-    required int area,
+    required String area,
     required String name,
     required int id,
     required double score,
+    required int? eventStart,
     required EventSnapshotExtrasModel extras,
   }) = _EventSnapshotModel;
 

@@ -9,6 +9,7 @@ import 'package:rg_rek/features/events/domain/entities/event_snapshot_extras.dar
 import 'package:rg_rek/features/events/domain/use_cases/load_event_snapshots_by_phrase.dart';
 import 'package:rg_rek/features/events/presentation/pages/quick_search/bloc/quick_search_bloc.dart';
 
+import '../../../../mock_data_objects/mock_entities.dart';
 import 'quick_search_bloc_test.mocks.dart';
 
 @GenerateMocks([LoadEventSnapshotsByPhrase])
@@ -23,28 +24,10 @@ void main() {
 
   const tPhrase = 'Mad';
 
-  final tEventSnapshots = [
-    EventSnapshot(
-      area: 1,
-      name: 'Mad football',
-      id: 1,
-      score: 1.1,
-      extras: EventSnapshotExtras(
-        categoryId3: 1,
-        categoryId2: 1,
-        sportId: 1,
-        categoryName1: 'CATEGORY_NAME_1',
-        categoryId1: 1,
-        categoryName2: 'CATEGORY_NAME_2',
-        categoryName3: 'CATEGORY_NAME_3',
-      ),
-    ),
-  ];
-
   void setUpMockLoadUseCaseSuccess() => when(
         loadUseCase(any),
       ).thenAnswer(
-        (_) async => Right(tEventSnapshots),
+        (_) async => Right(tEventSnapshotList),
       );
 
   test(
@@ -69,7 +52,7 @@ void main() {
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
     expect: () => [
       const QuickSearchState.loading(),
-      QuickSearchState.loaded(tEventSnapshots),
+      QuickSearchState.loaded(tGamesCardData),
     ],
   );
 

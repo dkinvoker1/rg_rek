@@ -57,7 +57,7 @@ class GameCardData with _$GameCardData {
     required String category2Name,
     required int category3Id,
     required String category3Name,
-    required DateTime eventStart,
+    required DateTime? eventStart,
     required List<SelectableOutcome> outcomes,
   }) = _GameCardData;
 }

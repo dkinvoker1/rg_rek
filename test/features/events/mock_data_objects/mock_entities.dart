@@ -65,10 +65,11 @@ final tEventSnapshotList = [
 ];
 
 final tEventSnapshot = EventSnapshot(
-  area: 1,
+  area: '1',
   name: 'Mad footbal',
   id: 1,
   score: 1.1,
+  eventStart: null,
   extras: tEventSnapshotExtras,
 );
 
@@ -110,17 +111,18 @@ final List<GamesByCategory3> tGamesByCategory3 = [
 final List<GameCardData> tGamesCardData = [
   GameCardData(
     category1Id: 1,
-    category1Name: 'category1Name',
+    category1Name: 'CATEGORY_NAME_1',
     gameType: 1,
     gameName: 'gameName',
-    category2Name: 'category2Name',
+    category2Name: 'CATEGORY_NAME_2',
     category3Id: 1,
-    category3Name: 'category3Name',
-    eventStart: DateTime(2000, 1, 1),
+    category3Name: 'CATEGORY_NAME_3',
+    eventStart: null,
     outcomes: tSelectableOutcomes,
   ),
 ];
 
 final List<SelectableOutcome> tSelectableOutcomes = [
+  SelectableOutcome(isSelected: false, outcome: tGameOutcome),
   SelectableOutcome(isSelected: false, outcome: tGameOutcome),
 ];

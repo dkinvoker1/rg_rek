@@ -45,6 +45,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MyEventsTabPage(),
       );
     },
+    GamesByTypeRoute.name: (routeData) {
+      final args = routeData.argsAs<GamesByTypeRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: GamesByTypePage(
+          key: args.key,
+          gamesByGameType: args.gamesByGameType,
+        ),
+      );
+    },
     OfferTabRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -55,16 +65,6 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const QuickSearchPage(),
-      );
-    },
-    GamesByTypeRoute.name: (routeData) {
-      final args = routeData.argsAs<GamesByTypeRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: GamesByTypePage(
-          key: args.key,
-          gamesByGameType: args.gamesByGameType,
-        ),
       );
     },
   };
@@ -141,34 +141,6 @@ class MyEventsTabRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [OfferTabPage]
-class OfferTabRoute extends PageRouteInfo<void> {
-  const OfferTabRoute({List<PageRouteInfo>? children})
-      : super(
-          OfferTabRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'OfferTabRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [QuickSearchPage]
-class QuickSearchRoute extends PageRouteInfo<void> {
-  const QuickSearchRoute({List<PageRouteInfo>? children})
-      : super(
-          QuickSearchRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'QuickSearchRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
 /// [GamesByTypePage]
 class GamesByTypeRoute extends PageRouteInfo<GamesByTypeRouteArgs> {
   GamesByTypeRoute({
@@ -204,4 +176,32 @@ class GamesByTypeRouteArgs {
   String toString() {
     return 'GamesByTypeRouteArgs{key: $key, gamesByGameType: $gamesByGameType}';
   }
+}
+
+/// generated route for
+/// [OfferTabPage]
+class OfferTabRoute extends PageRouteInfo<void> {
+  const OfferTabRoute({List<PageRouteInfo>? children})
+      : super(
+          OfferTabRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OfferTabRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [QuickSearchPage]
+class QuickSearchRoute extends PageRouteInfo<void> {
+  const QuickSearchRoute({List<PageRouteInfo>? children})
+      : super(
+          QuickSearchRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'QuickSearchRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }

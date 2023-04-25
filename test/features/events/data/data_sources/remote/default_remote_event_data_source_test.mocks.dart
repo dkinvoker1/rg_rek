@@ -6,8 +6,6 @@
 import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:rg_rek/features/events/data/data_sources/remote/client/body_models/event_quick_search_body_model.dart'
-    as _i7;
 import 'package:rg_rek/features/events/data/data_sources/remote/client/event_client.dart'
     as _i3;
 import 'package:rg_rek/features/events/data/models/event_model.dart' as _i5;
@@ -64,7 +62,7 @@ class MockEventClient extends _i1.Mock implements _i3.EventClient {
       ) as _i4.Future<_i2.ResponseModel<List<_i5.EventModel>>>);
   @override
   _i4.Future<_i2.ResponseModel<List<_i6.EventSnapshotModel>>>
-      getEventSnapshotsByPhrase(_i7.EventQuickSearchBodyModel? body) =>
+      getEventSnapshotsByPhrase(Map<String, dynamic>? body) =>
           (super.noSuchMethod(
             Invocation.method(
               #getEventSnapshotsByPhrase,

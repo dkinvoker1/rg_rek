@@ -10,10 +10,11 @@ class EventSnapshot with _$EventSnapshot {
   const EventSnapshot._();
 
   factory EventSnapshot({
-    required int area,
+    required String area,
     required String name,
     required int id,
     required double score,
+    required DateTime? eventStart,
     required EventSnapshotExtras extras,
   }) = _EventSnapshot;
 
@@ -23,6 +24,9 @@ class EventSnapshot with _$EventSnapshot {
       name: model.name,
       id: model.id,
       score: model.score,
+      eventStart: model.eventStart == null
+          ? null
+          : DateTime.fromMillisecondsSinceEpoch(model.eventStart!),
       extras: EventSnapshotExtras.fromModel(model.extras),
     );
   }

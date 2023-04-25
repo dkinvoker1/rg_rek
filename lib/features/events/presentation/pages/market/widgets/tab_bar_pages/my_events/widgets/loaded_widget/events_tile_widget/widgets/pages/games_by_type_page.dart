@@ -25,9 +25,9 @@ class GamesByTypePage extends StatelessWidget {
                   '${gamesByCategory3.category2Name} > ${gamesByCategory3.category3Name}'),
               children: gamesByCategory3.games
                   .map(
-                    (gameCaardData) => Padding(
+                    (gameCardData) => Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 4),
-                      child: EventCardWidget(data: gameCaardData),
+                      child: EventCardWidget(data: gameCardData),
                     ),
                   )
                   .toList(),

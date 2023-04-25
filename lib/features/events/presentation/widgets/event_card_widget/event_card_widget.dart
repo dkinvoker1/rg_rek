@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/widgets/outcomes_widget/outcomes_widget.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/widgets/time_until_event_indicator_widget.dart';
 
 import '../../../../../core/widgets/rounded_border_container_widget.dart';
 import '../../pages/market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
-import 'widgets/hot_tag_widget.dart';
+import 'widgets/widgets.dart';
 
 class EventCardWidget extends StatelessWidget {
   const EventCardWidget({
@@ -28,11 +26,7 @@ class EventCardWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  data.eventStart.compareTo(DateTime.now()) > 0
-                      ? Text(
-                          "${data.category3Name} ${DateFormat('dd.MM').format(data.eventStart)}",
-                        )
-                      : Text(data.category3Name),
+                  NameWidget(data: data,),
                   const HotTagWidget(),
                 ],
               ),

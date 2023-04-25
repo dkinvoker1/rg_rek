@@ -14,13 +14,19 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+EventQuickSearchBodyModel _$EventQuickSearchBodyModelFromJson(
+    Map<String, dynamic> json) {
+  return _EventQuickSearchBodyModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$EventQuickSearchBodyModel {
-  List<Area> get areas => throw _privateConstructorUsedError;
+  List<String> get areas => throw _privateConstructorUsedError;
   String get languageCode => throw _privateConstructorUsedError;
-  List<Mode> get modes => throw _privateConstructorUsedError;
+  List<String> get modes => throw _privateConstructorUsedError;
   String get pattern => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EventQuickSearchBodyModelCopyWith<EventQuickSearchBodyModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -33,9 +39,9 @@ abstract class $EventQuickSearchBodyModelCopyWith<$Res> {
       _$EventQuickSearchBodyModelCopyWithImpl<$Res, EventQuickSearchBodyModel>;
   @useResult
   $Res call(
-      {List<Area> areas,
+      {List<String> areas,
       String languageCode,
-      List<Mode> modes,
+      List<String> modes,
       String pattern});
 }
 
@@ -62,7 +68,7 @@ class _$EventQuickSearchBodyModelCopyWithImpl<$Res,
       areas: null == areas
           ? _value.areas
           : areas // ignore: cast_nullable_to_non_nullable
-              as List<Area>,
+              as List<String>,
       languageCode: null == languageCode
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
@@ -70,7 +76,7 @@ class _$EventQuickSearchBodyModelCopyWithImpl<$Res,
       modes: null == modes
           ? _value.modes
           : modes // ignore: cast_nullable_to_non_nullable
-              as List<Mode>,
+              as List<String>,
       pattern: null == pattern
           ? _value.pattern
           : pattern // ignore: cast_nullable_to_non_nullable
@@ -89,9 +95,9 @@ abstract class _$$_EventQuickSearchBodyModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Area> areas,
+      {List<String> areas,
       String languageCode,
-      List<Mode> modes,
+      List<String> modes,
       String pattern});
 }
 
@@ -117,7 +123,7 @@ class __$$_EventQuickSearchBodyModelCopyWithImpl<$Res>
       areas: null == areas
           ? _value._areas
           : areas // ignore: cast_nullable_to_non_nullable
-              as List<Area>,
+              as List<String>,
       languageCode: null == languageCode
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
@@ -125,7 +131,7 @@ class __$$_EventQuickSearchBodyModelCopyWithImpl<$Res>
       modes: null == modes
           ? _value._modes
           : modes // ignore: cast_nullable_to_non_nullable
-              as List<Mode>,
+              as List<String>,
       pattern: null == pattern
           ? _value.pattern
           : pattern // ignore: cast_nullable_to_non_nullable
@@ -135,20 +141,23 @@ class __$$_EventQuickSearchBodyModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_EventQuickSearchBodyModel implements _EventQuickSearchBodyModel {
   _$_EventQuickSearchBodyModel(
-      {final List<Area> areas = Area.values,
+      {final List<String> areas = const ['PREMATCH_EVENT'],
       this.languageCode = 'pl',
-      final List<Mode> modes = Mode.values,
+      final List<String> modes = const ['INFIX', 'PREFIX'],
       required this.pattern})
       : _areas = areas,
         _modes = modes;
 
-  final List<Area> _areas;
+  factory _$_EventQuickSearchBodyModel.fromJson(Map<String, dynamic> json) =>
+      _$$_EventQuickSearchBodyModelFromJson(json);
+
+  final List<String> _areas;
   @override
   @JsonKey()
-  List<Area> get areas {
+  List<String> get areas {
     if (_areas is EqualUnmodifiableListView) return _areas;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_areas);
@@ -157,10 +166,10 @@ class _$_EventQuickSearchBodyModel implements _EventQuickSearchBodyModel {
   @override
   @JsonKey()
   final String languageCode;
-  final List<Mode> _modes;
+  final List<String> _modes;
   @override
   @JsonKey()
-  List<Mode> get modes {
+  List<String> get modes {
     if (_modes is EqualUnmodifiableListView) return _modes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_modes);
@@ -186,6 +195,7 @@ class _$_EventQuickSearchBodyModel implements _EventQuickSearchBodyModel {
             (identical(other.pattern, pattern) || other.pattern == pattern));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -200,21 +210,31 @@ class _$_EventQuickSearchBodyModel implements _EventQuickSearchBodyModel {
   _$$_EventQuickSearchBodyModelCopyWith<_$_EventQuickSearchBodyModel>
       get copyWith => __$$_EventQuickSearchBodyModelCopyWithImpl<
           _$_EventQuickSearchBodyModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EventQuickSearchBodyModelToJson(
+      this,
+    );
+  }
 }
 
 abstract class _EventQuickSearchBodyModel implements EventQuickSearchBodyModel {
   factory _EventQuickSearchBodyModel(
-      {final List<Area> areas,
+      {final List<String> areas,
       final String languageCode,
-      final List<Mode> modes,
+      final List<String> modes,
       required final String pattern}) = _$_EventQuickSearchBodyModel;
 
+  factory _EventQuickSearchBodyModel.fromJson(Map<String, dynamic> json) =
+      _$_EventQuickSearchBodyModel.fromJson;
+
   @override
-  List<Area> get areas;
+  List<String> get areas;
   @override
   String get languageCode;
   @override
-  List<Mode> get modes;
+  List<String> get modes;
   @override
   String get pattern;
   @override

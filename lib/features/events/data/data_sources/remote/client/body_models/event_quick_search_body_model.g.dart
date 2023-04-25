@@ -6,34 +6,24 @@ part of 'event_quick_search_body_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-EventQuickSearchBodyModel _$EventQuickSearchBodyModelFromJson(
+_$_EventQuickSearchBodyModel _$$_EventQuickSearchBodyModelFromJson(
         Map<String, dynamic> json) =>
-    EventQuickSearchBodyModel(
-      areas: (json['areas'] as List<dynamic>)
-          .map((e) => $enumDecode(_$AreaEnumMap, e))
-          .toList(),
-      languageCode: json['languageCode'] as String,
-      modes: (json['modes'] as List<dynamic>)
-          .map((e) => $enumDecode(_$ModeEnumMap, e))
-          .toList(),
+    _$_EventQuickSearchBodyModel(
+      areas:
+          (json['areas'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const ['PREMATCH_EVENT'],
+      languageCode: json['languageCode'] as String? ?? 'pl',
+      modes:
+          (json['modes'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const ['INFIX', 'PREFIX'],
       pattern: json['pattern'] as String,
     );
 
-Map<String, dynamic> _$EventQuickSearchBodyModelToJson(
-        EventQuickSearchBodyModel instance) =>
+Map<String, dynamic> _$$_EventQuickSearchBodyModelToJson(
+        _$_EventQuickSearchBodyModel instance) =>
     <String, dynamic>{
-      'areas': instance.areas.map((e) => _$AreaEnumMap[e]!).toList(),
+      'areas': instance.areas,
       'languageCode': instance.languageCode,
-      'modes': instance.modes.map((e) => _$ModeEnumMap[e]!).toList(),
+      'modes': instance.modes,
       'pattern': instance.pattern,
     };
-
-const _$AreaEnumMap = {
-  Area.CATEGORY: 'CATEGORY',
-  Area.PREMATCH_EVENT: 'PREMATCH_EVENT',
-};
-
-const _$ModeEnumMap = {
-  Mode.INFIX: 'INFIX',
-  Mode.PREFIX: 'PREFIX',
-};

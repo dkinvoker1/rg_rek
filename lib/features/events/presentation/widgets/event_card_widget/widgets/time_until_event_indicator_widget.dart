@@ -9,12 +9,14 @@ class TimeUntilEventLineIndicatorWidget extends StatelessWidget {
     required this.startTime,
   });
 
-  final DateTime startTime;
+  final DateTime? startTime;
 
   @override
   Widget build(BuildContext context) {
-    return startTime.compareTo(DateTime.now()) > 0
-        ? FutureEventLineIndicatorWidget(startTime: startTime)
-        : LiveEventLineIndicatorWidget(startTime: startTime);
+    return startTime == null
+        ? const SizedBox.shrink()
+        : startTime!.compareTo(DateTime.now()) > 0
+            ? FutureEventLineIndicatorWidget(startTime: startTime!)
+            : LiveEventLineIndicatorWidget(startTime: startTime!);
   }
 }

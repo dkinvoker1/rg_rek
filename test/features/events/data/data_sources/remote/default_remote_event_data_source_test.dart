@@ -98,7 +98,7 @@ void main() {
 
       void setUpResponseCode200() {
         when(
-          mockClient.getEventSnapshotsByPhrase(tBody),
+          mockClient.getEventSnapshotsByPhrase(tBody.toJson()),
         ).thenAnswer(
           (_) async => tResponseModel,
         );
@@ -113,7 +113,7 @@ void main() {
           dataSource.getEventSnapshotsByPhrase(tPhrase);
           //assert
           verify(
-            mockClient.getEventSnapshotsByPhrase(tBody),
+            mockClient.getEventSnapshotsByPhrase(tBody.toJson()),
           );
 
           verifyNoMoreInteractions(mockClient);
@@ -133,7 +133,7 @@ void main() {
       );
 
       void setUpResponseException() {
-        when(mockClient.getEventSnapshotsByPhrase(tBody))
+        when(mockClient.getEventSnapshotsByPhrase(tBody.toJson()))
             .thenThrow(Exception('an error ocured'));
       }
 

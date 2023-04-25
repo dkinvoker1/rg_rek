@@ -20,10 +20,11 @@ EventSnapshotModel _$EventSnapshotModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EventSnapshotModel {
-  int get area => throw _privateConstructorUsedError;
+  String get area => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
+  int? get eventStart => throw _privateConstructorUsedError;
   EventSnapshotExtrasModel get extras => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,10 +40,11 @@ abstract class $EventSnapshotModelCopyWith<$Res> {
       _$EventSnapshotModelCopyWithImpl<$Res, EventSnapshotModel>;
   @useResult
   $Res call(
-      {int area,
+      {String area,
       String name,
       int id,
       double score,
+      int? eventStart,
       EventSnapshotExtrasModel extras});
 
   $EventSnapshotExtrasModelCopyWith<$Res> get extras;
@@ -65,13 +67,14 @@ class _$EventSnapshotModelCopyWithImpl<$Res, $Val extends EventSnapshotModel>
     Object? name = null,
     Object? id = null,
     Object? score = null,
+    Object? eventStart = freezed,
     Object? extras = null,
   }) {
     return _then(_value.copyWith(
       area: null == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -84,6 +87,10 @@ class _$EventSnapshotModelCopyWithImpl<$Res, $Val extends EventSnapshotModel>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      eventStart: freezed == eventStart
+          ? _value.eventStart
+          : eventStart // ignore: cast_nullable_to_non_nullable
+              as int?,
       extras: null == extras
           ? _value.extras
           : extras // ignore: cast_nullable_to_non_nullable
@@ -109,10 +116,11 @@ abstract class _$$_EventSnapshotModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int area,
+      {String area,
       String name,
       int id,
       double score,
+      int? eventStart,
       EventSnapshotExtrasModel extras});
 
   @override
@@ -134,13 +142,14 @@ class __$$_EventSnapshotModelCopyWithImpl<$Res>
     Object? name = null,
     Object? id = null,
     Object? score = null,
+    Object? eventStart = freezed,
     Object? extras = null,
   }) {
     return _then(_$_EventSnapshotModel(
       area: null == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -153,6 +162,10 @@ class __$$_EventSnapshotModelCopyWithImpl<$Res>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      eventStart: freezed == eventStart
+          ? _value.eventStart
+          : eventStart // ignore: cast_nullable_to_non_nullable
+              as int?,
       extras: null == extras
           ? _value.extras
           : extras // ignore: cast_nullable_to_non_nullable
@@ -169,6 +182,7 @@ class _$_EventSnapshotModel extends _EventSnapshotModel {
       required this.name,
       required this.id,
       required this.score,
+      required this.eventStart,
       required this.extras})
       : super._();
 
@@ -176,7 +190,7 @@ class _$_EventSnapshotModel extends _EventSnapshotModel {
       _$$_EventSnapshotModelFromJson(json);
 
   @override
-  final int area;
+  final String area;
   @override
   final String name;
   @override
@@ -184,11 +198,13 @@ class _$_EventSnapshotModel extends _EventSnapshotModel {
   @override
   final double score;
   @override
+  final int? eventStart;
+  @override
   final EventSnapshotExtrasModel extras;
 
   @override
   String toString() {
-    return 'EventSnapshotModel(area: $area, name: $name, id: $id, score: $score, extras: $extras)';
+    return 'EventSnapshotModel(area: $area, name: $name, id: $id, score: $score, eventStart: $eventStart, extras: $extras)';
   }
 
   @override
@@ -200,12 +216,15 @@ class _$_EventSnapshotModel extends _EventSnapshotModel {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.score, score) || other.score == score) &&
+            (identical(other.eventStart, eventStart) ||
+                other.eventStart == eventStart) &&
             (identical(other.extras, extras) || other.extras == extras));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, area, name, id, score, extras);
+  int get hashCode =>
+      Object.hash(runtimeType, area, name, id, score, eventStart, extras);
 
   @JsonKey(ignore: true)
   @override
@@ -224,10 +243,11 @@ class _$_EventSnapshotModel extends _EventSnapshotModel {
 
 abstract class _EventSnapshotModel extends EventSnapshotModel {
   factory _EventSnapshotModel(
-      {required final int area,
+      {required final String area,
       required final String name,
       required final int id,
       required final double score,
+      required final int? eventStart,
       required final EventSnapshotExtrasModel extras}) = _$_EventSnapshotModel;
   _EventSnapshotModel._() : super._();
 
@@ -235,13 +255,15 @@ abstract class _EventSnapshotModel extends EventSnapshotModel {
       _$_EventSnapshotModel.fromJson;
 
   @override
-  int get area;
+  String get area;
   @override
   String get name;
   @override
   int get id;
   @override
   double get score;
+  @override
+  int? get eventStart;
   @override
   EventSnapshotExtrasModel get extras;
   @override

@@ -16,10 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$EventSnapshot {
-  int get area => throw _privateConstructorUsedError;
+  String get area => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
+  DateTime? get eventStart => throw _privateConstructorUsedError;
   EventSnapshotExtras get extras => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -34,10 +35,11 @@ abstract class $EventSnapshotCopyWith<$Res> {
       _$EventSnapshotCopyWithImpl<$Res, EventSnapshot>;
   @useResult
   $Res call(
-      {int area,
+      {String area,
       String name,
       int id,
       double score,
+      DateTime? eventStart,
       EventSnapshotExtras extras});
 
   $EventSnapshotExtrasCopyWith<$Res> get extras;
@@ -60,13 +62,14 @@ class _$EventSnapshotCopyWithImpl<$Res, $Val extends EventSnapshot>
     Object? name = null,
     Object? id = null,
     Object? score = null,
+    Object? eventStart = freezed,
     Object? extras = null,
   }) {
     return _then(_value.copyWith(
       area: null == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -79,6 +82,10 @@ class _$EventSnapshotCopyWithImpl<$Res, $Val extends EventSnapshot>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      eventStart: freezed == eventStart
+          ? _value.eventStart
+          : eventStart // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       extras: null == extras
           ? _value.extras
           : extras // ignore: cast_nullable_to_non_nullable
@@ -104,10 +111,11 @@ abstract class _$$_EventSnapshotCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int area,
+      {String area,
       String name,
       int id,
       double score,
+      DateTime? eventStart,
       EventSnapshotExtras extras});
 
   @override
@@ -129,13 +137,14 @@ class __$$_EventSnapshotCopyWithImpl<$Res>
     Object? name = null,
     Object? id = null,
     Object? score = null,
+    Object? eventStart = freezed,
     Object? extras = null,
   }) {
     return _then(_$_EventSnapshot(
       area: null == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -148,6 +157,10 @@ class __$$_EventSnapshotCopyWithImpl<$Res>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      eventStart: freezed == eventStart
+          ? _value.eventStart
+          : eventStart // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       extras: null == extras
           ? _value.extras
           : extras // ignore: cast_nullable_to_non_nullable
@@ -164,11 +177,12 @@ class _$_EventSnapshot extends _EventSnapshot {
       required this.name,
       required this.id,
       required this.score,
+      required this.eventStart,
       required this.extras})
       : super._();
 
   @override
-  final int area;
+  final String area;
   @override
   final String name;
   @override
@@ -176,11 +190,13 @@ class _$_EventSnapshot extends _EventSnapshot {
   @override
   final double score;
   @override
+  final DateTime? eventStart;
+  @override
   final EventSnapshotExtras extras;
 
   @override
   String toString() {
-    return 'EventSnapshot(area: $area, name: $name, id: $id, score: $score, extras: $extras)';
+    return 'EventSnapshot(area: $area, name: $name, id: $id, score: $score, eventStart: $eventStart, extras: $extras)';
   }
 
   @override
@@ -192,11 +208,14 @@ class _$_EventSnapshot extends _EventSnapshot {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.score, score) || other.score == score) &&
+            (identical(other.eventStart, eventStart) ||
+                other.eventStart == eventStart) &&
             (identical(other.extras, extras) || other.extras == extras));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, area, name, id, score, extras);
+  int get hashCode =>
+      Object.hash(runtimeType, area, name, id, score, eventStart, extras);
 
   @JsonKey(ignore: true)
   @override
@@ -207,21 +226,24 @@ class _$_EventSnapshot extends _EventSnapshot {
 
 abstract class _EventSnapshot extends EventSnapshot {
   factory _EventSnapshot(
-      {required final int area,
+      {required final String area,
       required final String name,
       required final int id,
       required final double score,
+      required final DateTime? eventStart,
       required final EventSnapshotExtras extras}) = _$_EventSnapshot;
   _EventSnapshot._() : super._();
 
   @override
-  int get area;
+  String get area;
   @override
   String get name;
   @override
   int get id;
   @override
   double get score;
+  @override
+  DateTime? get eventStart;
   @override
   EventSnapshotExtras get extras;
   @override

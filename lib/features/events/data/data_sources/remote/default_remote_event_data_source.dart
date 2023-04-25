@@ -24,7 +24,7 @@ class DefaultRemoteEventDataSource implements RemoteEventDataSource {
   Future<List<EventSnapshotModel>> getEventSnapshotsByPhrase(
       String phrase) async {
     try {
-      var body = EventQuickSearchBodyModel(pattern: phrase);
+      var body = EventQuickSearchBodyModel(pattern: phrase).toJson();
       var response = await client.getEventSnapshotsByPhrase(body);
       return response.data;
     } catch (e) {
