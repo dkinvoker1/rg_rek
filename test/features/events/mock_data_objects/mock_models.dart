@@ -33,7 +33,9 @@ final tEventModel = EventModel(
   gamesCount: 1,
   remoteId: 1,
   eventExtendedData: tEventExtendedDataModel,
-  eventGames: [tEventGameModel],
+  eventGames: [
+    tEventGameModel,
+  ],
 );
 
 final tEventExtendedDataModel = EventExtendedDataModel(

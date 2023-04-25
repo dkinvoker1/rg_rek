@@ -23,10 +23,9 @@ class MyEventsBloc extends Bloc<MyEventsEvent, MyEventsState> {
 
         var categoriesString = EventCategory.values.fold(
           '',
-          (previousValue, element) => previousValue + element.value.toString(),
+          (previousValue, element) => '$previousValue,${element.value}',
         );
-        var split = categoriesString.split('');
-        categoriesString = split.join(',');
+        categoriesString = categoriesString.replaceFirst(',', '');
 
         var events = await loadEventsByCategory(categoriesString);
 

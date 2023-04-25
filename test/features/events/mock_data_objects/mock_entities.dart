@@ -48,7 +48,7 @@ final tEventGame = EventGame(
   gameName: 'gameName',
   gameType: 1,
   marketTypes: [1],
-  outcomes: [],
+  outcomes: [tGameOutcome],
 );
 
 final tGameOutcome = GameOutcome(
@@ -88,66 +88,6 @@ final List<EventsByCategory1> tEventsByCategory1 = [
     eventCategory: EventCategory.scoocer,
     gamesCount: 1,
     gamesByType: tGamesByGameType,
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.baseball,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.baseball,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.icehockey,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.tennis,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.liveEvent,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.specialEvent,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.handball,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.floorball,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.golf,
-    gamesCount: 0,
-    gamesByType: [],
-    isExpanded: false,
-  ),
-  EventsByCategory1(
-    eventCategory: EventCategory.volleyball,
-    gamesCount: 0,
-    gamesByType: [],
     isExpanded: false,
   ),
 ];

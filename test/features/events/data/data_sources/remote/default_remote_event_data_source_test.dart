@@ -56,7 +56,7 @@ void main() {
           // act
           final result = await dataSource.getEventsByCategory(tCategoryId);
           // assert
-          expect(result, equals(tEventModel));
+          expect(result, equals(tEventModelList));
         },
       );
 

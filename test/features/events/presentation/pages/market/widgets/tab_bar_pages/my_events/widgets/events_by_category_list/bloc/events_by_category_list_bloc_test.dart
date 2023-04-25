@@ -29,10 +29,7 @@ void main() {
         (_) async => Right(tEventList),
       );
 
-  final tCategoriesString = EventCategory.values.fold(
-    '',
-    (previousValue, element) => previousValue + element.value.toString(),
-  );
+  const tCategoriesString = '1,2,3,4,5,6,7,8,9,10,11';
 
   test(
     'should get data from use case',
