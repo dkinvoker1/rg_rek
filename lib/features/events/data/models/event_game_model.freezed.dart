@@ -25,11 +25,11 @@ mixin _$EventGameModel {
   int get eventLayout => throw _privateConstructorUsedError;
   int get gameCode => throw _privateConstructorUsedError;
   double get gameId => throw _privateConstructorUsedError;
-  bool get gameLayout => throw _privateConstructorUsedError;
+  int get gameLayout => throw _privateConstructorUsedError;
   String get gameName => throw _privateConstructorUsedError;
   int get gameType => throw _privateConstructorUsedError;
-  List<int> get marketTypes => throw _privateConstructorUsedError;
-  int get periodId => throw _privateConstructorUsedError;
+  List<int> get marketTypes =>
+      throw _privateConstructorUsedError; // required int periodId,
   List<GameOutcomeModel> get outcomes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,11 +50,10 @@ abstract class $EventGameModelCopyWith<$Res> {
       int eventLayout,
       int gameCode,
       double gameId,
-      bool gameLayout,
+      int gameLayout,
       String gameName,
       int gameType,
       List<int> marketTypes,
-      int periodId,
       List<GameOutcomeModel> outcomes});
 }
 
@@ -80,7 +79,6 @@ class _$EventGameModelCopyWithImpl<$Res, $Val extends EventGameModel>
     Object? gameName = null,
     Object? gameType = null,
     Object? marketTypes = null,
-    Object? periodId = null,
     Object? outcomes = null,
   }) {
     return _then(_value.copyWith(
@@ -107,7 +105,7 @@ class _$EventGameModelCopyWithImpl<$Res, $Val extends EventGameModel>
       gameLayout: null == gameLayout
           ? _value.gameLayout
           : gameLayout // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
@@ -120,10 +118,6 @@ class _$EventGameModelCopyWithImpl<$Res, $Val extends EventGameModel>
           ? _value.marketTypes
           : marketTypes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      periodId: null == periodId
-          ? _value.periodId
-          : periodId // ignore: cast_nullable_to_non_nullable
-              as int,
       outcomes: null == outcomes
           ? _value.outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -146,11 +140,10 @@ abstract class _$$_EventGameModelCopyWith<$Res>
       int eventLayout,
       int gameCode,
       double gameId,
-      bool gameLayout,
+      int gameLayout,
       String gameName,
       int gameType,
       List<int> marketTypes,
-      int periodId,
       List<GameOutcomeModel> outcomes});
 }
 
@@ -174,7 +167,6 @@ class __$$_EventGameModelCopyWithImpl<$Res>
     Object? gameName = null,
     Object? gameType = null,
     Object? marketTypes = null,
-    Object? periodId = null,
     Object? outcomes = null,
   }) {
     return _then(_$_EventGameModel(
@@ -201,7 +193,7 @@ class __$$_EventGameModelCopyWithImpl<$Res>
       gameLayout: null == gameLayout
           ? _value.gameLayout
           : gameLayout // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
@@ -214,10 +206,6 @@ class __$$_EventGameModelCopyWithImpl<$Res>
           ? _value._marketTypes
           : marketTypes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      periodId: null == periodId
-          ? _value.periodId
-          : periodId // ignore: cast_nullable_to_non_nullable
-              as int,
       outcomes: null == outcomes
           ? _value._outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -239,7 +227,6 @@ class _$_EventGameModel extends _EventGameModel {
       required this.gameName,
       required this.gameType,
       required final List<int> marketTypes,
-      required this.periodId,
       required final List<GameOutcomeModel> outcomes})
       : _marketTypes = marketTypes,
         _outcomes = outcomes,
@@ -259,7 +246,7 @@ class _$_EventGameModel extends _EventGameModel {
   @override
   final double gameId;
   @override
-  final bool gameLayout;
+  final int gameLayout;
   @override
   final String gameName;
   @override
@@ -272,9 +259,9 @@ class _$_EventGameModel extends _EventGameModel {
     return EqualUnmodifiableListView(_marketTypes);
   }
 
-  @override
-  final int periodId;
+// required int periodId,
   final List<GameOutcomeModel> _outcomes;
+// required int periodId,
   @override
   List<GameOutcomeModel> get outcomes {
     if (_outcomes is EqualUnmodifiableListView) return _outcomes;
@@ -284,7 +271,7 @@ class _$_EventGameModel extends _EventGameModel {
 
   @override
   String toString() {
-    return 'EventGameModel(argument: $argument, combinationType: $combinationType, eventLayout: $eventLayout, gameCode: $gameCode, gameId: $gameId, gameLayout: $gameLayout, gameName: $gameName, gameType: $gameType, marketTypes: $marketTypes, periodId: $periodId, outcomes: $outcomes)';
+    return 'EventGameModel(argument: $argument, combinationType: $combinationType, eventLayout: $eventLayout, gameCode: $gameCode, gameId: $gameId, gameLayout: $gameLayout, gameName: $gameName, gameType: $gameType, marketTypes: $marketTypes, outcomes: $outcomes)';
   }
 
   @override
@@ -309,8 +296,6 @@ class _$_EventGameModel extends _EventGameModel {
                 other.gameType == gameType) &&
             const DeepCollectionEquality()
                 .equals(other._marketTypes, _marketTypes) &&
-            (identical(other.periodId, periodId) ||
-                other.periodId == periodId) &&
             const DeepCollectionEquality().equals(other._outcomes, _outcomes));
   }
 
@@ -327,7 +312,6 @@ class _$_EventGameModel extends _EventGameModel {
       gameName,
       gameType,
       const DeepCollectionEquality().hash(_marketTypes),
-      periodId,
       const DeepCollectionEquality().hash(_outcomes));
 
   @JsonKey(ignore: true)
@@ -351,11 +335,10 @@ abstract class _EventGameModel extends EventGameModel {
       required final int eventLayout,
       required final int gameCode,
       required final double gameId,
-      required final bool gameLayout,
+      required final int gameLayout,
       required final String gameName,
       required final int gameType,
       required final List<int> marketTypes,
-      required final int periodId,
       required final List<GameOutcomeModel> outcomes}) = _$_EventGameModel;
   _EventGameModel._() : super._();
 
@@ -373,16 +356,14 @@ abstract class _EventGameModel extends EventGameModel {
   @override
   double get gameId;
   @override
-  bool get gameLayout;
+  int get gameLayout;
   @override
   String get gameName;
   @override
   int get gameType;
   @override
   List<int> get marketTypes;
-  @override
-  int get periodId;
-  @override
+  @override // required int periodId,
   List<GameOutcomeModel> get outcomes;
   @override
   @JsonKey(ignore: true)

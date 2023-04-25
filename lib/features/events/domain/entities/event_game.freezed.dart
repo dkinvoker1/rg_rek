@@ -21,11 +21,10 @@ mixin _$EventGame {
   int get eventLayout => throw _privateConstructorUsedError;
   int get gameCode => throw _privateConstructorUsedError;
   double get gameId => throw _privateConstructorUsedError;
-  bool get gameLayout => throw _privateConstructorUsedError;
+  int get gameLayout => throw _privateConstructorUsedError;
   String get gameName => throw _privateConstructorUsedError;
   int get gameType => throw _privateConstructorUsedError;
   List<int> get marketTypes => throw _privateConstructorUsedError;
-  int get periodId => throw _privateConstructorUsedError;
   List<GameOutcome> get outcomes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -44,11 +43,10 @@ abstract class $EventGameCopyWith<$Res> {
       int eventLayout,
       int gameCode,
       double gameId,
-      bool gameLayout,
+      int gameLayout,
       String gameName,
       int gameType,
       List<int> marketTypes,
-      int periodId,
       List<GameOutcome> outcomes});
 }
 
@@ -74,7 +72,6 @@ class _$EventGameCopyWithImpl<$Res, $Val extends EventGame>
     Object? gameName = null,
     Object? gameType = null,
     Object? marketTypes = null,
-    Object? periodId = null,
     Object? outcomes = null,
   }) {
     return _then(_value.copyWith(
@@ -101,7 +98,7 @@ class _$EventGameCopyWithImpl<$Res, $Val extends EventGame>
       gameLayout: null == gameLayout
           ? _value.gameLayout
           : gameLayout // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
@@ -114,10 +111,6 @@ class _$EventGameCopyWithImpl<$Res, $Val extends EventGame>
           ? _value.marketTypes
           : marketTypes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      periodId: null == periodId
-          ? _value.periodId
-          : periodId // ignore: cast_nullable_to_non_nullable
-              as int,
       outcomes: null == outcomes
           ? _value.outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -139,11 +132,10 @@ abstract class _$$_EventGameCopyWith<$Res> implements $EventGameCopyWith<$Res> {
       int eventLayout,
       int gameCode,
       double gameId,
-      bool gameLayout,
+      int gameLayout,
       String gameName,
       int gameType,
       List<int> marketTypes,
-      int periodId,
       List<GameOutcome> outcomes});
 }
 
@@ -167,7 +159,6 @@ class __$$_EventGameCopyWithImpl<$Res>
     Object? gameName = null,
     Object? gameType = null,
     Object? marketTypes = null,
-    Object? periodId = null,
     Object? outcomes = null,
   }) {
     return _then(_$_EventGame(
@@ -194,7 +185,7 @@ class __$$_EventGameCopyWithImpl<$Res>
       gameLayout: null == gameLayout
           ? _value.gameLayout
           : gameLayout // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
       gameName: null == gameName
           ? _value.gameName
           : gameName // ignore: cast_nullable_to_non_nullable
@@ -207,10 +198,6 @@ class __$$_EventGameCopyWithImpl<$Res>
           ? _value._marketTypes
           : marketTypes // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      periodId: null == periodId
-          ? _value.periodId
-          : periodId // ignore: cast_nullable_to_non_nullable
-              as int,
       outcomes: null == outcomes
           ? _value._outcomes
           : outcomes // ignore: cast_nullable_to_non_nullable
@@ -232,7 +219,6 @@ class _$_EventGame extends _EventGame {
       required this.gameName,
       required this.gameType,
       required final List<int> marketTypes,
-      required this.periodId,
       required final List<GameOutcome> outcomes})
       : _marketTypes = marketTypes,
         _outcomes = outcomes,
@@ -249,7 +235,7 @@ class _$_EventGame extends _EventGame {
   @override
   final double gameId;
   @override
-  final bool gameLayout;
+  final int gameLayout;
   @override
   final String gameName;
   @override
@@ -262,8 +248,6 @@ class _$_EventGame extends _EventGame {
     return EqualUnmodifiableListView(_marketTypes);
   }
 
-  @override
-  final int periodId;
   final List<GameOutcome> _outcomes;
   @override
   List<GameOutcome> get outcomes {
@@ -274,7 +258,7 @@ class _$_EventGame extends _EventGame {
 
   @override
   String toString() {
-    return 'EventGame(argument: $argument, combinationType: $combinationType, eventLayout: $eventLayout, gameCode: $gameCode, gameId: $gameId, gameLayout: $gameLayout, gameName: $gameName, gameType: $gameType, marketTypes: $marketTypes, periodId: $periodId, outcomes: $outcomes)';
+    return 'EventGame(argument: $argument, combinationType: $combinationType, eventLayout: $eventLayout, gameCode: $gameCode, gameId: $gameId, gameLayout: $gameLayout, gameName: $gameName, gameType: $gameType, marketTypes: $marketTypes, outcomes: $outcomes)';
   }
 
   @override
@@ -299,8 +283,6 @@ class _$_EventGame extends _EventGame {
                 other.gameType == gameType) &&
             const DeepCollectionEquality()
                 .equals(other._marketTypes, _marketTypes) &&
-            (identical(other.periodId, periodId) ||
-                other.periodId == periodId) &&
             const DeepCollectionEquality().equals(other._outcomes, _outcomes));
   }
 
@@ -316,7 +298,6 @@ class _$_EventGame extends _EventGame {
       gameName,
       gameType,
       const DeepCollectionEquality().hash(_marketTypes),
-      periodId,
       const DeepCollectionEquality().hash(_outcomes));
 
   @JsonKey(ignore: true)
@@ -333,11 +314,10 @@ abstract class _EventGame extends EventGame {
       required final int eventLayout,
       required final int gameCode,
       required final double gameId,
-      required final bool gameLayout,
+      required final int gameLayout,
       required final String gameName,
       required final int gameType,
       required final List<int> marketTypes,
-      required final int periodId,
       required final List<GameOutcome> outcomes}) = _$_EventGame;
   _EventGame._() : super._();
 
@@ -352,15 +332,13 @@ abstract class _EventGame extends EventGame {
   @override
   double get gameId;
   @override
-  bool get gameLayout;
+  int get gameLayout;
   @override
   String get gameName;
   @override
   int get gameType;
   @override
   List<int> get marketTypes;
-  @override
-  int get periodId;
   @override
   List<GameOutcome> get outcomes;
   @override

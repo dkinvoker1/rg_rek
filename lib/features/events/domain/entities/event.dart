@@ -17,14 +17,14 @@ class Event with _$Event {
     required String category2Name,
     required int category3Id,
     required String category3Name,
-    required int eventCodeId,
+    required int? eventCodeId,
     required int eventId,
     required String eventName,
     required DateTime eventStart,
     required int eventType,
     required int gamesCount,
-    required int remoteId,
-    required List<EventExtendedData> eventExtendedData,
+    required int? remoteId,
+    required EventExtendedData eventExtendedData,
     required List<EventGame> eventGames,
   }) = _Event;
 
@@ -39,13 +39,11 @@ class Event with _$Event {
       eventCodeId: model.eventCodeId,
       eventId: model.eventId,
       eventName: model.eventName,
-      eventStart: model.eventStart,
+      eventStart: DateTime.fromMillisecondsSinceEpoch(model.eventStart),
       eventType: model.eventType,
       gamesCount: model.gamesCount,
       remoteId: model.remoteId,
-      eventExtendedData: model.eventExtendedData
-          .map((e) => EventExtendedData.fromModel(e))
-          .toList(),
+      eventExtendedData: EventExtendedData.fromModel(model.eventExtendedData),
       eventGames: model.eventGames.map((e) => EventGame.fromModel(e)).toList(),
     );
   }

@@ -19,38 +19,46 @@ class _EventClient implements EventClient {
   String? baseUrl;
 
   @override
-  Future<List<EventModel>> getEventsByCategory(categoryId) async {
+  Future<ResponseModel<List<EventModel>>> getEventsByCategory(
+      categoryId) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<EventModel>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ResponseModel<List<EventModel>>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/market/categories/multi/{categoryId}/events',
+              '/market/categories/multi/${categoryId}/events',
               queryParameters: queryParameters,
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    var value = _result.data!
-        .map((dynamic i) => EventModel.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = ResponseModel<List<EventModel>>.fromJson(
+      _result.data!,
+      (json) => json is List<dynamic>
+          ? json
+              .map<EventModel>(
+                  (i) => EventModel.fromJson(i as Map<String, dynamic>))
+              .toList()
+          : List.empty(),
+    );
     return value;
   }
 
   @override
-  Future<List<EventSnapshotModel>> getEventSnapshotsByPhrase(body) async {
+  Future<ResponseModel<List<EventSnapshotModel>>> getEventSnapshotsByPhrase(
+      body) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<EventSnapshotModel>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ResponseModel<List<EventSnapshotModel>>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -62,10 +70,15 @@ class _EventClient implements EventClient {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    var value = _result.data!
-        .map((dynamic i) =>
-            EventSnapshotModel.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = ResponseModel<List<EventSnapshotModel>>.fromJson(
+      _result.data!,
+      (json) => json is List<dynamic>
+          ? json
+              .map<EventSnapshotModel>(
+                  (i) => EventSnapshotModel.fromJson(i as Map<String, dynamic>))
+              .toList()
+          : List.empty(),
+    );
     return value;
   }
 

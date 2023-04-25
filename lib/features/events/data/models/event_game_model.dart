@@ -15,11 +15,11 @@ class EventGameModel with _$EventGameModel {
     required int eventLayout,
     required int gameCode,
     required double gameId,
-    required bool gameLayout,
+    required int gameLayout,
     required String gameName,
     required int gameType,
     required List<int> marketTypes,
-    required int periodId,
+    // required int periodId,
     required List<GameOutcomeModel> outcomes,
   }) = _EventGameModel;
 

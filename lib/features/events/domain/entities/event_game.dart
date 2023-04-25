@@ -15,11 +15,10 @@ class EventGame with _$EventGame {
     required int eventLayout,
     required int gameCode,
     required double gameId,
-    required bool gameLayout,
+    required int gameLayout,
     required String gameName,
     required int gameType,
     required List<int> marketTypes,
-    required int periodId,
     required List<GameOutcome> outcomes,
   }) = _EventGame;
 
@@ -34,7 +33,6 @@ class EventGame with _$EventGame {
       gameName: model.gameName,
       gameType: model.gameType,
       marketTypes: model.marketTypes,
-      periodId: model.periodId,
       outcomes: model.outcomes.map((e) => GameOutcome.fromModel(e)).toList(),
     );
   }

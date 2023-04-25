@@ -14,17 +14,15 @@ _$_EventModel _$$_EventModelFromJson(Map<String, dynamic> json) =>
       category2Name: json['category2Name'] as String,
       category3Id: json['category3Id'] as int,
       category3Name: json['category3Name'] as String,
-      eventCodeId: json['eventCodeId'] as int,
+      eventCodeId: json['eventCodeId'] as int?,
       eventId: json['eventId'] as int,
       eventName: json['eventName'] as String,
-      eventStart: DateTime.parse(json['eventStart'] as String),
+      eventStart: json['eventStart'] as int,
       eventType: json['eventType'] as int,
       gamesCount: json['gamesCount'] as int,
-      remoteId: json['remoteId'] as int,
-      eventExtendedData: (json['eventExtendedData'] as List<dynamic>)
-          .map(
-              (e) => EventExtendedDataModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      remoteId: json['remoteId'] as int?,
+      eventExtendedData: EventExtendedDataModel.fromJson(
+          json['eventExtendedData'] as Map<String, dynamic>),
       eventGames: (json['eventGames'] as List<dynamic>)
           .map((e) => EventGameModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -41,10 +39,10 @@ Map<String, dynamic> _$$_EventModelToJson(_$_EventModel instance) =>
       'eventCodeId': instance.eventCodeId,
       'eventId': instance.eventId,
       'eventName': instance.eventName,
-      'eventStart': instance.eventStart.toIso8601String(),
+      'eventStart': instance.eventStart,
       'eventType': instance.eventType,
       'gamesCount': instance.gamesCount,
       'remoteId': instance.remoteId,
-      'eventExtendedData': instance.eventExtendedData,
-      'eventGames': instance.eventGames,
+      'eventExtendedData': instance.eventExtendedData.toJson(),
+      'eventGames': instance.eventGames.map((e) => e.toJson()).toList(),
     };

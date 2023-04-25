@@ -24,5 +24,5 @@ Map<String, dynamic> _$$_EventSnapshotModelToJson(
       'name': instance.name,
       'id': instance.id,
       'score': instance.score,
-      'extras': instance.extras,
+      'extras': instance.extras.toJson(),
     };

@@ -45,7 +45,7 @@ class MockEventRepository extends _i1.Mock implements _i3.EventRepository {
 
   @override
   _i4.Future<_i2.Either<_i5.Failure, List<_i6.Event>>> getEventsByCategory(
-          int? categoryId) =>
+          String? categoryId) =>
       (super.noSuchMethod(
         Invocation.method(
           #getEventsByCategory,

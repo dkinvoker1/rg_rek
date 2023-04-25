@@ -49,7 +49,7 @@ class MockRemoteEventDataSource extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i5.EventModel>> getEventsByCategory(int? categoryId) =>
+  _i3.Future<List<_i5.EventModel>> getEventsByCategory(String? categoryId) =>
       (super.noSuchMethod(
         Invocation.method(
           #getEventsByCategory,

@@ -17,14 +17,14 @@ class EventModel with _$EventModel {
     required String category2Name,
     required int category3Id,
     required String category3Name,
-    required int eventCodeId,
+    required int? eventCodeId,
     required int eventId,
     required String eventName,
-    required DateTime eventStart,
+    required int eventStart,
     required int eventType,
     required int gamesCount,
-    required int remoteId,
-    required List<EventExtendedDataModel> eventExtendedData,
+    required int? remoteId,
+    required EventExtendedDataModel eventExtendedData,
     required List<EventGameModel> eventGames,
   }) = _EventModel;
 

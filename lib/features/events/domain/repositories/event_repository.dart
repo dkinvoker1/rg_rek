@@ -5,7 +5,7 @@ import '../entities/event.dart';
 import '../entities/event_snapshot.dart';
 
 abstract class EventRepository {
-  Future<Either<Failure, List<Event>>> getEventsByCategory(int categoryId);
+  Future<Either<Failure, List<Event>>> getEventsByCategory(String categoryId);
   
   Future<Either<Failure, List<EventSnapshot>>> getEventSnapshotsByPhrase(String phrase);
 }

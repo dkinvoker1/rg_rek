@@ -18,7 +18,7 @@ class DefaultEventRepository implements EventRepository {
 
   @override
   Future<Either<Failure, List<Event>>> getEventsByCategory(
-      int categoryId) async {
+      String categoryId) async {
     if (!await networkInfo.isConnected) {
       return const Left(Failure.connectionFailure());
     }

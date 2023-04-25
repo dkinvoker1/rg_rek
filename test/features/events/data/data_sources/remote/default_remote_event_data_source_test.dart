@@ -5,12 +5,9 @@ import 'package:rg_rek/core/errors/exceptions.dart';
 import 'package:rg_rek/features/events/data/data_sources/remote/client/body_models/event_quick_search_body_model.dart';
 import 'package:rg_rek/features/events/data/data_sources/remote/client/event_client.dart';
 import 'package:rg_rek/features/events/data/data_sources/remote/default_remote_event_data_source.dart';
-import 'package:rg_rek/features/events/data/models/event_game_model.dart';
-import 'package:rg_rek/features/events/data/models/event_model.dart';
-import 'package:rg_rek/features/events/data/models/event_snapshot_extras_model.dart';
-import 'package:rg_rek/features/events/data/models/event_snapshot_model.dart';
-import 'package:rg_rek/features/events/data/models/game_outcome_model.dart';
+import 'package:rg_rek/features/events/data/models/response_model.dart';
 
+import '../../../mock_data_objects/mock_models.dart';
 import 'default_remote_event_data_source_test.mocks.dart';
 
 @GenerateMocks([EventClient])
@@ -26,51 +23,11 @@ void main() {
   group(
     'getEventsByCategory',
     () {
-      const tCategoryId = 1;
-
-      final tEventModel = [
-        EventModel(
-          category1Id: 1,
-          category1Name: 'category1Name',
-          category2Id: 1,
-          category2Name: 'category2Name',
-          category3Id: 1,
-          category3Name: 'category3Name',
-          eventCodeId: 1,
-          eventId: 1,
-          eventName: 'eventName',
-          eventStart: DateTime(2000, 1, 1),
-          eventType: 1,
-          gamesCount: 1,
-          remoteId: 1,
-          eventExtendedData: [],
-          eventGames: [
-            EventGameModel(
-              argument: 1.1,
-              combinationType: 1,
-              eventLayout: 1,
-              gameCode: 1,
-              gameId: 1.1,
-              gameLayout: true,
-              gameName: 'gameName',
-              gameType: 1,
-              marketTypes: [1],
-              periodId: 1,
-              outcomes: [
-                GameOutcomeModel(
-                    outcomeId: 1,
-                    outcomeName: 'outcomeName',
-                    outcomeOdds: 1.1,
-                    status: 1)
-              ],
-            )
-          ],
-        ),
-      ];
+      const tCategoryId = '1';
 
       void setUpResponseCode200() {
         when(mockClient.getEventsByCategory(tCategoryId)).thenAnswer(
-          (_) async => tEventModel,
+          (_) async => tResponseModel,
         );
       }
 
@@ -133,29 +90,17 @@ void main() {
         pattern: tPhrase,
       );
 
-      final tSnapshotModel = [
-        EventSnapshotModel(
-          area: 1,
-          name: 'Mad footbal',
-          id: 1,
-          score: 1.1,
-          extras: EventSnapshotExtrasModel(
-            CATEGORY_ID_3: 1,
-            CATEGORY_ID_2: 1,
-            SPORT_ID: 1,
-            CATEGORY_NAME_1: 'CATEGORY_NAME_1',
-            CATEGORY_ID_1: 1,
-            CATEGORY_NAME_2: 'CATEGORY_NAME_2',
-            CATEGORY_NAME_3: 'CATEGORY_NAME_3',
-          ),
-        ),
-      ];
+      var tResponseModel = ResponseModel(
+        code: 200,
+        description: 'description',
+        data: tSnapshotModelList,
+      );
 
       void setUpResponseCode200() {
         when(
           mockClient.getEventSnapshotsByPhrase(tBody),
         ).thenAnswer(
-          (_) async => tSnapshotModel,
+          (_) async => tResponseModel,
         );
       }
 
@@ -183,7 +128,7 @@ void main() {
           // act
           final result = await dataSource.getEventSnapshotsByPhrase(tPhrase);
           // assert
-          expect(result, equals(tSnapshotModel));
+          expect(result, equals(tSnapshotModelList));
         },
       );
 

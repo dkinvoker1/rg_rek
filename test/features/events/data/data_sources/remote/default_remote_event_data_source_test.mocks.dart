@@ -3,16 +3,17 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:rg_rek/features/events/data/data_sources/remote/client/body_models/event_quick_search_body_model.dart'
-    as _i6;
+    as _i7;
 import 'package:rg_rek/features/events/data/data_sources/remote/client/event_client.dart'
-    as _i2;
-import 'package:rg_rek/features/events/data/models/event_model.dart' as _i4;
+    as _i3;
+import 'package:rg_rek/features/events/data/models/event_model.dart' as _i5;
 import 'package:rg_rek/features/events/data/models/event_snapshot_model.dart'
-    as _i5;
+    as _i6;
+import 'package:rg_rek/features/events/data/models/response_model.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -25,32 +26,58 @@ import 'package:rg_rek/features/events/data/models/event_snapshot_model.dart'
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeResponseModel_0<T> extends _i1.SmartFake
+    implements _i2.ResponseModel<T> {
+  _FakeResponseModel_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [EventClient].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockEventClient extends _i1.Mock implements _i2.EventClient {
+class MockEventClient extends _i1.Mock implements _i3.EventClient {
   MockEventClient() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<_i4.EventModel>> getEventsByCategory(int? categoryId) =>
+  _i4.Future<_i2.ResponseModel<List<_i5.EventModel>>> getEventsByCategory(
+          String? categoryId) =>
       (super.noSuchMethod(
         Invocation.method(
           #getEventsByCategory,
           [categoryId],
         ),
-        returnValue: _i3.Future<List<_i4.EventModel>>.value(<_i4.EventModel>[]),
-      ) as _i3.Future<List<_i4.EventModel>>);
+        returnValue: _i4.Future<_i2.ResponseModel<List<_i5.EventModel>>>.value(
+            _FakeResponseModel_0<List<_i5.EventModel>>(
+          this,
+          Invocation.method(
+            #getEventsByCategory,
+            [categoryId],
+          ),
+        )),
+      ) as _i4.Future<_i2.ResponseModel<List<_i5.EventModel>>>);
   @override
-  _i3.Future<List<_i5.EventSnapshotModel>> getEventSnapshotsByPhrase(
-          _i6.EventQuickSearchBodyModel? body) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #getEventSnapshotsByPhrase,
-          [body],
-        ),
-        returnValue: _i3.Future<List<_i5.EventSnapshotModel>>.value(
-            <_i5.EventSnapshotModel>[]),
-      ) as _i3.Future<List<_i5.EventSnapshotModel>>);
+  _i4.Future<_i2.ResponseModel<List<_i6.EventSnapshotModel>>>
+      getEventSnapshotsByPhrase(_i7.EventQuickSearchBodyModel? body) =>
+          (super.noSuchMethod(
+            Invocation.method(
+              #getEventSnapshotsByPhrase,
+              [body],
+            ),
+            returnValue: _i4.Future<
+                    _i2.ResponseModel<List<_i6.EventSnapshotModel>>>.value(
+                _FakeResponseModel_0<List<_i6.EventSnapshotModel>>(
+              this,
+              Invocation.method(
+                #getEventSnapshotsByPhrase,
+                [body],
+              ),
+            )),
+          ) as _i4.Future<_i2.ResponseModel<List<_i6.EventSnapshotModel>>>);
 }

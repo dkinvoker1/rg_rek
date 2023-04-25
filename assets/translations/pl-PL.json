@@ -1,0 +1,31 @@
+{
+    "server_failure_string": "BŁĄD SERWERA",
+    "connection_failure_string": "BRAK POŁĄCZENIA Z INTERNETEM",
+    
+
+    "what_are_you_looking_for": "CZEGO SZUKASZ",
+    "unimplemented_tab": "NIEZAIMPLEMENTOWANA ZAKŁADKA",
+
+    "offer": "OFERTA",
+    "my": "MOJE",
+    "live": "LIVE",
+    "hot": "HOT",
+    "cashback": "CASHBACK",
+
+    "give_us_a_sec": "DAJ NAM CHWILĘ",
+    "searching_in_database": "PRZESZUKUJEMY BAZĘ DANYCH",
+    "no_results": "BRAK WYNIKÓW",
+
+    "all": "WSZYSTKO",
+    "scoocer": "PIKA NOŻNA",
+    "basketball": "KOSZYKÓWKA",
+    "baseball": "BASEBALL",
+    "icehockey": "HOKEJ NA LODZIE",
+    "tennis": "TENIS",
+    "liveEvent": "PIŁKA RĘCZNA",
+    "specialEvent": "WYDARZENIE SPECJALNE",
+    "handball": "PIŁKA RĘCZNA",
+    "floorball": "UNIHOKEJ",
+    "golf": "GOLF",
+    "volleyball": "SIATKÓWKA"
+}

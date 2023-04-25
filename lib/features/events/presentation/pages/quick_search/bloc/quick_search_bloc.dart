@@ -22,10 +22,10 @@ class QuickSearchBloc extends Bloc<QuickSearchEvent, QuickSearchState> {
       eventSnapshotsList.fold(
         (failure) => failure.when(
           serverFailure: (_) => emit(
-            const QuickSearchState.error(serverFailureString),
+            QuickSearchState.error(serverFailureString),
           ),
           connectionFailure: (_) => emit(
-            const QuickSearchState.error(connectionFailureString),
+            QuickSearchState.error(connectionFailureString),
           ),
         ),
         (succes) => succes.isNotEmpty

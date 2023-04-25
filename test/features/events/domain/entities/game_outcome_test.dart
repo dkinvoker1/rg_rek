@@ -1,30 +1,18 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rg_rek/features/events/data/models/game_outcome_model.dart';
 import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
 
+import '../../mock_data_objects/mock_entities.dart';
+import '../../mock_data_objects/mock_models.dart';
+
 void main() {
-  final tModel = GameOutcomeModel(
-    outcomeId: 1,
-    outcomeName: 'outcomeName',
-    outcomeOdds: 1.1,
-    status: 1,
-  );
-
-  final tEntity = GameOutcome(
-    outcomeId: 1,
-    outcomeName: 'outcomeName',
-    outcomeOdds: 1.1,
-    status: 1,
-  );
-
   test(
     'fromModel',
     () {
       // act
-      final result = GameOutcome.fromModel(tModel);
+      final result = GameOutcome.fromModel(tGameOutcomeModel);
 
       //assert
-      expect(result, equals(tEntity));
+      expect(result, equals(tGameOutcome));
     },
   );
 }

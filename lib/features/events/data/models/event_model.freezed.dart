@@ -26,14 +26,14 @@ mixin _$EventModel {
   String get category2Name => throw _privateConstructorUsedError;
   int get category3Id => throw _privateConstructorUsedError;
   String get category3Name => throw _privateConstructorUsedError;
-  int get eventCodeId => throw _privateConstructorUsedError;
+  int? get eventCodeId => throw _privateConstructorUsedError;
   int get eventId => throw _privateConstructorUsedError;
   String get eventName => throw _privateConstructorUsedError;
-  DateTime get eventStart => throw _privateConstructorUsedError;
+  int get eventStart => throw _privateConstructorUsedError;
   int get eventType => throw _privateConstructorUsedError;
   int get gamesCount => throw _privateConstructorUsedError;
-  int get remoteId => throw _privateConstructorUsedError;
-  List<EventExtendedDataModel> get eventExtendedData =>
+  int? get remoteId => throw _privateConstructorUsedError;
+  EventExtendedDataModel get eventExtendedData =>
       throw _privateConstructorUsedError;
   List<EventGameModel> get eventGames => throw _privateConstructorUsedError;
 
@@ -56,15 +56,17 @@ abstract class $EventModelCopyWith<$Res> {
       String category2Name,
       int category3Id,
       String category3Name,
-      int eventCodeId,
+      int? eventCodeId,
       int eventId,
       String eventName,
-      DateTime eventStart,
+      int eventStart,
       int eventType,
       int gamesCount,
-      int remoteId,
-      List<EventExtendedDataModel> eventExtendedData,
+      int? remoteId,
+      EventExtendedDataModel eventExtendedData,
       List<EventGameModel> eventGames});
+
+  $EventExtendedDataModelCopyWith<$Res> get eventExtendedData;
 }
 
 /// @nodoc
@@ -86,13 +88,13 @@ class _$EventModelCopyWithImpl<$Res, $Val extends EventModel>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventCodeId = null,
+    Object? eventCodeId = freezed,
     Object? eventId = null,
     Object? eventName = null,
     Object? eventStart = null,
     Object? eventType = null,
     Object? gamesCount = null,
-    Object? remoteId = null,
+    Object? remoteId = freezed,
     Object? eventExtendedData = null,
     Object? eventGames = null,
   }) {
@@ -121,10 +123,10 @@ class _$EventModelCopyWithImpl<$Res, $Val extends EventModel>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventCodeId: null == eventCodeId
+      eventCodeId: freezed == eventCodeId
           ? _value.eventCodeId
           : eventCodeId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventId: null == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
@@ -136,7 +138,7 @@ class _$EventModelCopyWithImpl<$Res, $Val extends EventModel>
       eventStart: null == eventStart
           ? _value.eventStart
           : eventStart // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       eventType: null == eventType
           ? _value.eventType
           : eventType // ignore: cast_nullable_to_non_nullable
@@ -145,19 +147,28 @@ class _$EventModelCopyWithImpl<$Res, $Val extends EventModel>
           ? _value.gamesCount
           : gamesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      remoteId: null == remoteId
+      remoteId: freezed == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventExtendedData: null == eventExtendedData
           ? _value.eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
-              as List<EventExtendedDataModel>,
+              as EventExtendedDataModel,
       eventGames: null == eventGames
           ? _value.eventGames
           : eventGames // ignore: cast_nullable_to_non_nullable
               as List<EventGameModel>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EventExtendedDataModelCopyWith<$Res> get eventExtendedData {
+    return $EventExtendedDataModelCopyWith<$Res>(_value.eventExtendedData,
+        (value) {
+      return _then(_value.copyWith(eventExtendedData: value) as $Val);
+    });
   }
 }
 
@@ -176,15 +187,18 @@ abstract class _$$_EventModelCopyWith<$Res>
       String category2Name,
       int category3Id,
       String category3Name,
-      int eventCodeId,
+      int? eventCodeId,
       int eventId,
       String eventName,
-      DateTime eventStart,
+      int eventStart,
       int eventType,
       int gamesCount,
-      int remoteId,
-      List<EventExtendedDataModel> eventExtendedData,
+      int? remoteId,
+      EventExtendedDataModel eventExtendedData,
       List<EventGameModel> eventGames});
+
+  @override
+  $EventExtendedDataModelCopyWith<$Res> get eventExtendedData;
 }
 
 /// @nodoc
@@ -204,13 +218,13 @@ class __$$_EventModelCopyWithImpl<$Res>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventCodeId = null,
+    Object? eventCodeId = freezed,
     Object? eventId = null,
     Object? eventName = null,
     Object? eventStart = null,
     Object? eventType = null,
     Object? gamesCount = null,
-    Object? remoteId = null,
+    Object? remoteId = freezed,
     Object? eventExtendedData = null,
     Object? eventGames = null,
   }) {
@@ -239,10 +253,10 @@ class __$$_EventModelCopyWithImpl<$Res>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventCodeId: null == eventCodeId
+      eventCodeId: freezed == eventCodeId
           ? _value.eventCodeId
           : eventCodeId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventId: null == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
@@ -254,7 +268,7 @@ class __$$_EventModelCopyWithImpl<$Res>
       eventStart: null == eventStart
           ? _value.eventStart
           : eventStart // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as int,
       eventType: null == eventType
           ? _value.eventType
           : eventType // ignore: cast_nullable_to_non_nullable
@@ -263,14 +277,14 @@ class __$$_EventModelCopyWithImpl<$Res>
           ? _value.gamesCount
           : gamesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      remoteId: null == remoteId
+      remoteId: freezed == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventExtendedData: null == eventExtendedData
-          ? _value._eventExtendedData
+          ? _value.eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
-              as List<EventExtendedDataModel>,
+              as EventExtendedDataModel,
       eventGames: null == eventGames
           ? _value._eventGames
           : eventGames // ignore: cast_nullable_to_non_nullable
@@ -296,10 +310,9 @@ class _$_EventModel extends _EventModel {
       required this.eventType,
       required this.gamesCount,
       required this.remoteId,
-      required final List<EventExtendedDataModel> eventExtendedData,
+      required this.eventExtendedData,
       required final List<EventGameModel> eventGames})
-      : _eventExtendedData = eventExtendedData,
-        _eventGames = eventGames,
+      : _eventGames = eventGames,
         super._();
 
   factory _$_EventModel.fromJson(Map<String, dynamic> json) =>
@@ -318,28 +331,21 @@ class _$_EventModel extends _EventModel {
   @override
   final String category3Name;
   @override
-  final int eventCodeId;
+  final int? eventCodeId;
   @override
   final int eventId;
   @override
   final String eventName;
   @override
-  final DateTime eventStart;
+  final int eventStart;
   @override
   final int eventType;
   @override
   final int gamesCount;
   @override
-  final int remoteId;
-  final List<EventExtendedDataModel> _eventExtendedData;
+  final int? remoteId;
   @override
-  List<EventExtendedDataModel> get eventExtendedData {
-    if (_eventExtendedData is EqualUnmodifiableListView)
-      return _eventExtendedData;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_eventExtendedData);
-  }
-
+  final EventExtendedDataModel eventExtendedData;
   final List<EventGameModel> _eventGames;
   @override
   List<EventGameModel> get eventGames {
@@ -383,8 +389,8 @@ class _$_EventModel extends _EventModel {
                 other.gamesCount == gamesCount) &&
             (identical(other.remoteId, remoteId) ||
                 other.remoteId == remoteId) &&
-            const DeepCollectionEquality()
-                .equals(other._eventExtendedData, _eventExtendedData) &&
+            (identical(other.eventExtendedData, eventExtendedData) ||
+                other.eventExtendedData == eventExtendedData) &&
             const DeepCollectionEquality()
                 .equals(other._eventGames, _eventGames));
   }
@@ -406,7 +412,7 @@ class _$_EventModel extends _EventModel {
       eventType,
       gamesCount,
       remoteId,
-      const DeepCollectionEquality().hash(_eventExtendedData),
+      eventExtendedData,
       const DeepCollectionEquality().hash(_eventGames));
 
   @JsonKey(ignore: true)
@@ -431,14 +437,14 @@ abstract class _EventModel extends EventModel {
       required final String category2Name,
       required final int category3Id,
       required final String category3Name,
-      required final int eventCodeId,
+      required final int? eventCodeId,
       required final int eventId,
       required final String eventName,
-      required final DateTime eventStart,
+      required final int eventStart,
       required final int eventType,
       required final int gamesCount,
-      required final int remoteId,
-      required final List<EventExtendedDataModel> eventExtendedData,
+      required final int? remoteId,
+      required final EventExtendedDataModel eventExtendedData,
       required final List<EventGameModel> eventGames}) = _$_EventModel;
   _EventModel._() : super._();
 
@@ -458,21 +464,21 @@ abstract class _EventModel extends EventModel {
   @override
   String get category3Name;
   @override
-  int get eventCodeId;
+  int? get eventCodeId;
   @override
   int get eventId;
   @override
   String get eventName;
   @override
-  DateTime get eventStart;
+  int get eventStart;
   @override
   int get eventType;
   @override
   int get gamesCount;
   @override
-  int get remoteId;
+  int? get remoteId;
   @override
-  List<EventExtendedDataModel> get eventExtendedData;
+  EventExtendedDataModel get eventExtendedData;
   @override
   List<EventGameModel> get eventGames;
   @override

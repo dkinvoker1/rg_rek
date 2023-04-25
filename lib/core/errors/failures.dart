@@ -1,9 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'failures.freezed.dart';
 
-const String serverFailureString = 'Server Failure';
-const String connectionFailureString = 'Connection Failure';
+final String serverFailureString = 'server_failure_string'.tr();
+final String connectionFailureString = 'connection_failure_string'.tr();
 
 @freezed
 class Failure with _$Failure {

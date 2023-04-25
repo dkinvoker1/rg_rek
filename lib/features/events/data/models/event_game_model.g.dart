@@ -13,12 +13,11 @@ _$_EventGameModel _$$_EventGameModelFromJson(Map<String, dynamic> json) =>
       eventLayout: json['eventLayout'] as int,
       gameCode: json['gameCode'] as int,
       gameId: (json['gameId'] as num).toDouble(),
-      gameLayout: json['gameLayout'] as bool,
+      gameLayout: json['gameLayout'] as int,
       gameName: json['gameName'] as String,
       gameType: json['gameType'] as int,
       marketTypes:
           (json['marketTypes'] as List<dynamic>).map((e) => e as int).toList(),
-      periodId: json['periodId'] as int,
       outcomes: (json['outcomes'] as List<dynamic>)
           .map((e) => GameOutcomeModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -35,6 +34,5 @@ Map<String, dynamic> _$$_EventGameModelToJson(_$_EventGameModel instance) =>
       'gameName': instance.gameName,
       'gameType': instance.gameType,
       'marketTypes': instance.marketTypes,
-      'periodId': instance.periodId,
-      'outcomes': instance.outcomes,
+      'outcomes': instance.outcomes.map((e) => e.toJson()).toList(),
     };

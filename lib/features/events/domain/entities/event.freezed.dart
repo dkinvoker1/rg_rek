@@ -22,15 +22,14 @@ mixin _$Event {
   String get category2Name => throw _privateConstructorUsedError;
   int get category3Id => throw _privateConstructorUsedError;
   String get category3Name => throw _privateConstructorUsedError;
-  int get eventCodeId => throw _privateConstructorUsedError;
+  int? get eventCodeId => throw _privateConstructorUsedError;
   int get eventId => throw _privateConstructorUsedError;
   String get eventName => throw _privateConstructorUsedError;
   DateTime get eventStart => throw _privateConstructorUsedError;
   int get eventType => throw _privateConstructorUsedError;
   int get gamesCount => throw _privateConstructorUsedError;
-  int get remoteId => throw _privateConstructorUsedError;
-  List<EventExtendedData> get eventExtendedData =>
-      throw _privateConstructorUsedError;
+  int? get remoteId => throw _privateConstructorUsedError;
+  EventExtendedData get eventExtendedData => throw _privateConstructorUsedError;
   List<EventGame> get eventGames => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -49,15 +48,17 @@ abstract class $EventCopyWith<$Res> {
       String category2Name,
       int category3Id,
       String category3Name,
-      int eventCodeId,
+      int? eventCodeId,
       int eventId,
       String eventName,
       DateTime eventStart,
       int eventType,
       int gamesCount,
-      int remoteId,
-      List<EventExtendedData> eventExtendedData,
+      int? remoteId,
+      EventExtendedData eventExtendedData,
       List<EventGame> eventGames});
+
+  $EventExtendedDataCopyWith<$Res> get eventExtendedData;
 }
 
 /// @nodoc
@@ -79,13 +80,13 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventCodeId = null,
+    Object? eventCodeId = freezed,
     Object? eventId = null,
     Object? eventName = null,
     Object? eventStart = null,
     Object? eventType = null,
     Object? gamesCount = null,
-    Object? remoteId = null,
+    Object? remoteId = freezed,
     Object? eventExtendedData = null,
     Object? eventGames = null,
   }) {
@@ -114,10 +115,10 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventCodeId: null == eventCodeId
+      eventCodeId: freezed == eventCodeId
           ? _value.eventCodeId
           : eventCodeId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventId: null == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
@@ -138,19 +139,27 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
           ? _value.gamesCount
           : gamesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      remoteId: null == remoteId
+      remoteId: freezed == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventExtendedData: null == eventExtendedData
           ? _value.eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
-              as List<EventExtendedData>,
+              as EventExtendedData,
       eventGames: null == eventGames
           ? _value.eventGames
           : eventGames // ignore: cast_nullable_to_non_nullable
               as List<EventGame>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EventExtendedDataCopyWith<$Res> get eventExtendedData {
+    return $EventExtendedDataCopyWith<$Res>(_value.eventExtendedData, (value) {
+      return _then(_value.copyWith(eventExtendedData: value) as $Val);
+    });
   }
 }
 
@@ -167,15 +176,18 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
       String category2Name,
       int category3Id,
       String category3Name,
-      int eventCodeId,
+      int? eventCodeId,
       int eventId,
       String eventName,
       DateTime eventStart,
       int eventType,
       int gamesCount,
-      int remoteId,
-      List<EventExtendedData> eventExtendedData,
+      int? remoteId,
+      EventExtendedData eventExtendedData,
       List<EventGame> eventGames});
+
+  @override
+  $EventExtendedDataCopyWith<$Res> get eventExtendedData;
 }
 
 /// @nodoc
@@ -193,13 +205,13 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
     Object? category2Name = null,
     Object? category3Id = null,
     Object? category3Name = null,
-    Object? eventCodeId = null,
+    Object? eventCodeId = freezed,
     Object? eventId = null,
     Object? eventName = null,
     Object? eventStart = null,
     Object? eventType = null,
     Object? gamesCount = null,
-    Object? remoteId = null,
+    Object? remoteId = freezed,
     Object? eventExtendedData = null,
     Object? eventGames = null,
   }) {
@@ -228,10 +240,10 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
           ? _value.category3Name
           : category3Name // ignore: cast_nullable_to_non_nullable
               as String,
-      eventCodeId: null == eventCodeId
+      eventCodeId: freezed == eventCodeId
           ? _value.eventCodeId
           : eventCodeId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventId: null == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
@@ -252,14 +264,14 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
           ? _value.gamesCount
           : gamesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      remoteId: null == remoteId
+      remoteId: freezed == remoteId
           ? _value.remoteId
           : remoteId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       eventExtendedData: null == eventExtendedData
-          ? _value._eventExtendedData
+          ? _value.eventExtendedData
           : eventExtendedData // ignore: cast_nullable_to_non_nullable
-              as List<EventExtendedData>,
+              as EventExtendedData,
       eventGames: null == eventGames
           ? _value._eventGames
           : eventGames // ignore: cast_nullable_to_non_nullable
@@ -285,10 +297,9 @@ class _$_Event extends _Event {
       required this.eventType,
       required this.gamesCount,
       required this.remoteId,
-      required final List<EventExtendedData> eventExtendedData,
+      required this.eventExtendedData,
       required final List<EventGame> eventGames})
-      : _eventExtendedData = eventExtendedData,
-        _eventGames = eventGames,
+      : _eventGames = eventGames,
         super._();
 
   @override
@@ -304,7 +315,7 @@ class _$_Event extends _Event {
   @override
   final String category3Name;
   @override
-  final int eventCodeId;
+  final int? eventCodeId;
   @override
   final int eventId;
   @override
@@ -316,16 +327,9 @@ class _$_Event extends _Event {
   @override
   final int gamesCount;
   @override
-  final int remoteId;
-  final List<EventExtendedData> _eventExtendedData;
+  final int? remoteId;
   @override
-  List<EventExtendedData> get eventExtendedData {
-    if (_eventExtendedData is EqualUnmodifiableListView)
-      return _eventExtendedData;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_eventExtendedData);
-  }
-
+  final EventExtendedData eventExtendedData;
   final List<EventGame> _eventGames;
   @override
   List<EventGame> get eventGames {
@@ -369,8 +373,8 @@ class _$_Event extends _Event {
                 other.gamesCount == gamesCount) &&
             (identical(other.remoteId, remoteId) ||
                 other.remoteId == remoteId) &&
-            const DeepCollectionEquality()
-                .equals(other._eventExtendedData, _eventExtendedData) &&
+            (identical(other.eventExtendedData, eventExtendedData) ||
+                other.eventExtendedData == eventExtendedData) &&
             const DeepCollectionEquality()
                 .equals(other._eventGames, _eventGames));
   }
@@ -391,7 +395,7 @@ class _$_Event extends _Event {
       eventType,
       gamesCount,
       remoteId,
-      const DeepCollectionEquality().hash(_eventExtendedData),
+      eventExtendedData,
       const DeepCollectionEquality().hash(_eventGames));
 
   @JsonKey(ignore: true)
@@ -409,14 +413,14 @@ abstract class _Event extends Event {
       required final String category2Name,
       required final int category3Id,
       required final String category3Name,
-      required final int eventCodeId,
+      required final int? eventCodeId,
       required final int eventId,
       required final String eventName,
       required final DateTime eventStart,
       required final int eventType,
       required final int gamesCount,
-      required final int remoteId,
-      required final List<EventExtendedData> eventExtendedData,
+      required final int? remoteId,
+      required final EventExtendedData eventExtendedData,
       required final List<EventGame> eventGames}) = _$_Event;
   _Event._() : super._();
 
@@ -433,7 +437,7 @@ abstract class _Event extends Event {
   @override
   String get category3Name;
   @override
-  int get eventCodeId;
+  int? get eventCodeId;
   @override
   int get eventId;
   @override
@@ -445,9 +449,9 @@ abstract class _Event extends Event {
   @override
   int get gamesCount;
   @override
-  int get remoteId;
+  int? get remoteId;
   @override
-  List<EventExtendedData> get eventExtendedData;
+  EventExtendedData get eventExtendedData;
   @override
   List<EventGame> get eventGames;
   @override

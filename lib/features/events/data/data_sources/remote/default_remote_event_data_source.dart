@@ -11,9 +11,10 @@ class DefaultRemoteEventDataSource implements RemoteEventDataSource {
   DefaultRemoteEventDataSource(this.client);
 
   @override
-  Future<List<EventModel>> getEventsByCategory(int categoryId) async {
+  Future<List<EventModel>> getEventsByCategory(String categoryId) async {
     try {
-      return await client.getEventsByCategory(categoryId);
+      var response = await client.getEventsByCategory(categoryId);
+      return response.data;
     } catch (e) {
       throw ServerException();
     }
@@ -24,7 +25,8 @@ class DefaultRemoteEventDataSource implements RemoteEventDataSource {
       String phrase) async {
     try {
       var body = EventQuickSearchBodyModel(pattern: phrase);
-      return await client.getEventSnapshotsByPhrase(body);
+      var response = await client.getEventSnapshotsByPhrase(body);
+      return response.data;
     } catch (e) {
       throw ServerException();
     }

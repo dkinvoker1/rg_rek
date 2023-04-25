@@ -105,7 +105,7 @@ void main() {
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
     expect: () => [
       const QuickSearchState.loading(),
-      const QuickSearchState.error(connectionFailureString),
+      QuickSearchState.error(connectionFailureString),
     ],
   );
 
@@ -124,7 +124,7 @@ void main() {
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
     expect: () => [
       const QuickSearchState.loading(),
-      const QuickSearchState.error(serverFailureString),
+      QuickSearchState.error(serverFailureString),
     ],
   );
 }
