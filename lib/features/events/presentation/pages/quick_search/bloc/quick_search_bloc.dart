@@ -20,11 +20,11 @@ class QuickSearchBloc extends Bloc<QuickSearchEvent, QuickSearchState> {
       : super(const QuickSearchState.initial()) {
     on<_SearchByPhrase>(
       _sarchHandle,
-      // transformer: throttle(
-      //   const Duration(milliseconds: 500),
-      //   leading: false,
-      //   trailing: true,
-      // ),
+      transformer: throttle(
+        const Duration(milliseconds: 1000),
+        leading: false,
+        trailing: true,
+      ),
     );
   }
 
