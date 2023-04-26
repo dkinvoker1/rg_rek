@@ -1,12 +1,13 @@
 import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../../pages/market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
 
+part 'outcomes_bloc.freezed.dart';
 part 'outcomes_event.dart';
 part 'outcomes_state.dart';
-part 'outcomes_bloc.freezed.dart';
 
 class OutcomesBloc extends Bloc<OutcomesEvent, OutcomesState> {
   OutcomesBloc() : super(const OutcomesState.initial()) {

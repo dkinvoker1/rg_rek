@@ -2,9 +2,9 @@ import 'package:collection/collection.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rg_rek/features/events/presentation/enums/event_category_enum.dart';
 
 import '../../../../../../../../../../core/widgets/rounded_border_container_widget.dart';
+import '../../../../../../../enums/event_category_enum.dart';
 import '../../bloc/my_events_bloc.dart';
 
 class FilterWidget extends StatelessWidget {

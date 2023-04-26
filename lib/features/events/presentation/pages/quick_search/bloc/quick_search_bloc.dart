@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:bloc_event_transformers/bloc_event_transformers.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
-import 'package:rg_rek/features/events/presentation/pages/market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
+import '../../../../domain/entities/game_outcome.dart';
+import '../../market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
 import '../../../../domain/entities/event_snapshot.dart';
 import '../../../../domain/use_cases/load_event_snapshots_by_phrase.dart';
 

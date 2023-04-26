@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/event_card_widget.dart';
 
+import '../../../widgets/event_card_widget/event_card_widget.dart';
 import '../../market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
 
 class LoadedWidget extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rg_rek/core/widgets/rounded_border_container_widget.dart';
-import 'package:rg_rek/features/events/presentation/enums/event_category_enum.dart';
-import 'package:rg_rek/features/events/presentation/pages/market/widgets/tab_bar_pages/my_events/widgets/loaded_widget/events_tile_widget/widgets/games_by_type_tab_bar_widget.dart';
-import 'package:rg_rek/features/events/presentation/pages/market/widgets/tab_bar_pages/my_events/widgets/loaded_widget/events_tile_widget/widgets/title_widget.dart';
+import '../../../../../../../../../../../core/widgets/rounded_border_container_widget.dart';
+import '../../../../../../../../enums/event_category_enum.dart';
+import 'widgets/games_by_type_tab_bar_widget.dart';
+import 'widgets/title_widget.dart';
 
 import '../../../bloc/my_events_bloc.dart';
 

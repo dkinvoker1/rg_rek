@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rg_rek/features/events/presentation/pages/quick_search/bloc/quick_search_bloc.dart';
+import '../bloc/quick_search_bloc.dart';
 
 import '../../../../../../core/router/router.dart';
 import '../../../../../../core/widgets/rounded_border_container_widget.dart';

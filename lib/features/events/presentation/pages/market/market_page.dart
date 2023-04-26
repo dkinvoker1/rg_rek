@@ -11,11 +11,29 @@ class MarketPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [
-          HeaderWidget(),
-          SearchWidget(),
+        children: [
+          const HeaderWidget(),
+          const SearchWidget(),
           Flexible(
-            child: TabBarWidget(),
+            child: Stack(
+              alignment: AlignmentDirectional.topEnd,
+              children: [
+                const TabBarWidget(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    border: Border.all(color: Colors.grey.shade300),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Image.asset(
+                      'assets/images/calendar.png',
+                      height: 58,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

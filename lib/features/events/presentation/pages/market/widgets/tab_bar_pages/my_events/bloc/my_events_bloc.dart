@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rg_rek/features/events/domain/entities/game_outcome.dart';
-import 'package:rg_rek/features/events/presentation/enums/event_category_enum.dart';
+import '../../../../../../../domain/entities/game_outcome.dart';
+import '../../../../../../enums/event_category_enum.dart';
 import 'package:collection/collection.dart';
 
 import '../../../../../../../../../core/errors/failures.dart';

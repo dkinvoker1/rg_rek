@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rg_rek/features/events/presentation/enums/event_category_enum.dart';
-import 'package:rg_rek/features/events/presentation/pages/market/widgets/tab_bar_pages/my_events/widgets/loaded_widget/filter_widget.dart';
 
+import '../../../../../../../enums/event_category_enum.dart';
 import '../../bloc/my_events_bloc.dart';
 import 'events_tile_widget/events_tile_widget.dart';
+import 'filter_widget.dart';
 
 class LoadedWidget extends StatelessWidget {
   const LoadedWidget({Key? key, required this.eventsByCategory, this.filter})

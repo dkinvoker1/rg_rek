@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rg_rek/core/service_locator.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/widgets/outcomes_widget/bloc/outcomes_bloc.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/widgets/outcomes_widget/widgets/outcomes_toggle_buttons_widget.dart';
+import '../../../../../../../core/service_locator.dart';
+import 'bloc/outcomes_bloc.dart';
+import 'widgets/outcomes_toggle_buttons_widget.dart';
 
 import '../../../../pages/market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
 
