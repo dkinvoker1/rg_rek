@@ -8,7 +8,7 @@ part 'event_quick_search_body_model.g.dart';
 @freezed
 class EventQuickSearchBodyModel with _$EventQuickSearchBodyModel {
   factory EventQuickSearchBodyModel({
-    @Default(['PREMATCH_EVENT']) List<String> areas,
+    @Default(['PREMATCH_EVENT','LIVE_EVENT']) List<String> areas,
     @Default('pl') String languageCode,
     @Default(['INFIX', 'PREFIX']) List<String> modes,
     required String pattern,
