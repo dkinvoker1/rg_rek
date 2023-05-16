@@ -53,7 +53,10 @@ final tEventGameModel = EventGameModel(
   gameName: 'gameName',
   gameType: 1,
   marketTypes: [1],
-  outcomes: [tGameOutcomeModel],
+  outcomes: [
+    tGameOutcomeModel,
+    tGameOutcomeModel,
+  ],
 );
 
 final tGameOutcomeModel = GameOutcomeModel(
@@ -74,7 +77,7 @@ final tEventSnapshotModel = EventSnapshotModel(
   name: 'Mad footbal',
   id: 1,
   score: 1.1,
-  eventStart: null,
+  eventStart: DateTime(2000, 1, 1).millisecondsSinceEpoch,
   extras: tEventSnapshotExtrasModel,
 );
 
@@ -82,8 +85,8 @@ final tEventSnapshotExtrasModel = EventSnapshotExtrasModel(
   CATEGORY_ID_3: 1,
   CATEGORY_ID_2: 1,
   SPORT_ID: 1,
-  CATEGORY_NAME_1: 'CATEGORY_NAME_1',
+  CATEGORY_NAME_1: 'category1Name',
   CATEGORY_ID_1: 1,
-  CATEGORY_NAME_2: 'CATEGORY_NAME_2',
-  CATEGORY_NAME_3: 'CATEGORY_NAME_3',
+  CATEGORY_NAME_2: 'category2Name',
+  CATEGORY_NAME_3: 'category3Name',
 );

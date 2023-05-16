@@ -144,7 +144,7 @@ class __$$_EventQuickSearchBodyModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EventQuickSearchBodyModel implements _EventQuickSearchBodyModel {
   _$_EventQuickSearchBodyModel(
-      {final List<String> areas = const ['PREMATCH_EVENT'],
+      {final List<String> areas = const ['PREMATCH_EVENT', 'LIVE_EVENT'],
       this.languageCode = 'pl',
       final List<String> modes = const ['INFIX', 'PREFIX'],
       required this.pattern})

@@ -4,12 +4,10 @@ import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:rg_rek/core/errors/failures.dart';
-import 'package:rg_rek/features/events/domain/entities/event_snapshot.dart';
-import 'package:rg_rek/features/events/domain/entities/event_snapshot_extras.dart';
 import 'package:rg_rek/features/events/domain/use_cases/load_event_snapshots_by_phrase.dart';
 import 'package:rg_rek/features/events/presentation/pages/quick_search/bloc/quick_search_bloc.dart';
 
-import '../../../../mock_data_objects/mock_entities.dart';
+import '../../../../../../mock_data_objects/mock_entities.dart';
 import 'quick_search_bloc_test.mocks.dart';
 
 @GenerateMocks([LoadEventSnapshotsByPhrase])
@@ -50,6 +48,7 @@ void main() {
     build: () => quickSearchBloc,
     setUp: setUpMockLoadUseCaseSuccess,
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
+    wait: const Duration(milliseconds: 1000),
     expect: () => [
       const QuickSearchState.loading(),
       QuickSearchState.loaded(tGamesCardData),
@@ -67,6 +66,7 @@ void main() {
     build: () => quickSearchBloc,
     setUp: setUpMockLoadUseCaseEmpty,
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
+    wait: const Duration(milliseconds: 1000),
     expect: () => [
       const QuickSearchState.loading(),
       const QuickSearchState.loadedEmpty(),
@@ -86,6 +86,7 @@ void main() {
     build: () => quickSearchBloc,
     setUp: setUpMockLoadUseCaseConnectionFailure,
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
+    wait: const Duration(milliseconds: 1000),
     expect: () => [
       const QuickSearchState.loading(),
       QuickSearchState.error(connectionFailureString),
@@ -105,6 +106,7 @@ void main() {
     build: () => quickSearchBloc,
     setUp: setUpMockLoadUseCaseServerFailure,
     act: (bloc) => bloc.add(const QuickSearchEvent.searchByPhrase(tPhrase)),
+    wait: const Duration(milliseconds: 1000),
     expect: () => [
       const QuickSearchState.loading(),
       QuickSearchState.error(serverFailureString),

@@ -48,7 +48,10 @@ final tEventGame = EventGame(
   gameName: 'gameName',
   gameType: 1,
   marketTypes: [1],
-  outcomes: [tGameOutcome],
+  outcomes: [
+    tGameOutcome,
+    tGameOutcome,
+  ],
 );
 
 final tGameOutcome = GameOutcome(
@@ -69,7 +72,7 @@ final tEventSnapshot = EventSnapshot(
   name: 'Mad footbal',
   id: 1,
   score: 1.1,
-  eventStart: null,
+  eventStart: DateTime(2000, 1, 1),
   extras: tEventSnapshotExtras,
 );
 
@@ -77,10 +80,10 @@ final tEventSnapshotExtras = EventSnapshotExtras(
   categoryId3: 1,
   categoryId2: 1,
   sportId: 1,
-  categoryName1: 'CATEGORY_NAME_1',
+  categoryName1: 'category1Name',
   categoryId1: 1,
-  categoryName2: 'CATEGORY_NAME_2',
-  categoryName3: 'CATEGORY_NAME_3',
+  categoryName2: 'category2Name',
+  categoryName3: 'category3Name',
 );
 
 // Event by category
@@ -111,13 +114,13 @@ final List<GamesByCategory3> tGamesByCategory3 = [
 final List<GameCardData> tGamesCardData = [
   GameCardData(
     category1Id: 1,
-    category1Name: 'CATEGORY_NAME_1',
+    category1Name: 'category1Name',
     gameType: 1,
     gameName: 'gameName',
-    category2Name: 'CATEGORY_NAME_2',
+    category2Name: 'category2Name',
     category3Id: 1,
-    category3Name: 'CATEGORY_NAME_3',
-    eventStart: null,
+    category3Name: 'category3Name',
+    eventStart: DateTime(2000, 1, 1),
     outcomes: tSelectableOutcomes,
   ),
 ];

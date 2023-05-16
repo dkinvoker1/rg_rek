@@ -11,7 +11,7 @@ _$_EventQuickSearchBodyModel _$$_EventQuickSearchBodyModelFromJson(
     _$_EventQuickSearchBodyModel(
       areas:
           (json['areas'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const ['PREMATCH_EVENT'],
+              const ['PREMATCH_EVENT', 'LIVE_EVENT'],
       languageCode: json['languageCode'] as String? ?? 'pl',
       modes:
           (json['modes'] as List<dynamic>?)?.map((e) => e as String).toList() ??

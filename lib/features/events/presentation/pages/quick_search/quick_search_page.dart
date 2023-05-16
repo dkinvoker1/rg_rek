@@ -7,7 +7,6 @@ import '../../../../../core/widgets/loading_widget.dart.dart';
 import '../market/widgets/tab_bar_pages/my_events/widgets/exception_widget.dart';
 import 'bloc/quick_search_bloc.dart';
 import 'widgets/widgets.dart';
-// import 'widgets/widgets.dart';
 
 @RoutePage()
 class QuickSearchPage extends StatelessWidget {

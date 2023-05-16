@@ -40,7 +40,6 @@ class SearchWidget extends StatelessWidget {
                 child: TextField(
                   autofocus: true,
                   cursorColor: Colors.black,
-                  
                   decoration: const InputDecoration(
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.white),

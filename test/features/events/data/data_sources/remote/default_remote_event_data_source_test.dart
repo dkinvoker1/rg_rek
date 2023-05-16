@@ -7,7 +7,7 @@ import 'package:rg_rek/features/events/data/data_sources/remote/client/event_cli
 import 'package:rg_rek/features/events/data/data_sources/remote/default_remote_event_data_source.dart';
 import 'package:rg_rek/features/events/data/models/response_model.dart';
 
-import '../../../mock_data_objects/mock_models.dart';
+import '../../../../../mock_data_objects/mock_models.dart';
 import 'default_remote_event_data_source_test.mocks.dart';
 
 @GenerateMocks([EventClient])

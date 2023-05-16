@@ -6,7 +6,7 @@ import 'package:rg_rek/core/errors/failures.dart';
 import 'package:rg_rek/features/events/domain/repositories/event_repository.dart';
 import 'package:rg_rek/features/events/domain/use_cases/load_event_snapshots_by_phrase.dart';
 
-import '../../mock_data_objects/mock_entities.dart';
+import '../../../../mock_data_objects/mock_entities.dart';
 import 'load_event_snapshots_by_phrase_test.mocks.dart';
 
 @GenerateMocks([EventRepository])

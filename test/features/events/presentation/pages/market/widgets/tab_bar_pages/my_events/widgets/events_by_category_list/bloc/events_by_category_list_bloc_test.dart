@@ -5,10 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:rg_rek/core/errors/failures.dart';
 import 'package:rg_rek/features/events/domain/use_cases/load_events_by_category.dart';
-import 'package:rg_rek/features/events/presentation/enums/event_category_enum.dart';
 import 'package:rg_rek/features/events/presentation/pages/market/widgets/tab_bar_pages/my_events/bloc/my_events_bloc.dart';
 
-import '../../../../../../../../../mock_data_objects/mock_entities.dart';
+import '../../../../../../../../../../../mock_data_objects/mock_entities.dart';
 import 'events_by_category_list_bloc_test.mocks.dart';
 
 @GenerateMocks([LoadEventsByCategory])
