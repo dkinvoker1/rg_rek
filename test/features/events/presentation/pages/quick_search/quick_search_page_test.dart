@@ -2,8 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
-import 'package:rg_rek/core/widgets/loading_widget.dart.dart';
 import 'package:rg_rek/features/events/presentation/pages/quick_search/bloc/quick_search_bloc.dart';
 import 'package:rg_rek/features/events/presentation/pages/quick_search/quick_search_page.dart';
 import 'package:rg_rek/features/events/presentation/pages/quick_search/widgets/header_widget.dart';
@@ -11,7 +9,6 @@ import 'package:rg_rek/features/events/presentation/pages/quick_search/widgets/s
 import 'package:rg_rek/core/service_locator.dart' as sl;
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:rg_rek/features/events/presentation/widgets/event_card_widget/event_card_widget.dart';
 
 import '../../../../../mock_data_objects/mock_bloc_state_objects.dart';
 import '../../../../../test_helper.dart';

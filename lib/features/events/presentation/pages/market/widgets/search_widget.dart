@@ -15,6 +15,7 @@ class SearchWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: InkWell(
+        key: const Key('search_box'),
         onTap: () {
           context.pushRoute(
             const QuickSearchRoute(),
