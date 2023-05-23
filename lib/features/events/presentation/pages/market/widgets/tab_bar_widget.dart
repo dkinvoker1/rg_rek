@@ -37,7 +37,10 @@ class TabBarWidget extends StatelessWidget {
               ),
               CustomTabContainer(
                 isSelected: tabController.index == 1,
-                child: Tab(text: 'my'.tr()),
+                child: Tab(
+                  key: const Key('my_tab'),
+                  text: 'my'.tr(),
+                ),
               ),
               CustomTabContainer(
                 isSelected: tabController.index == 2,

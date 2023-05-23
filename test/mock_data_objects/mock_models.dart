@@ -6,7 +6,7 @@ import 'package:rg_rek/features/events/data/models/event_snapshot_model.dart';
 import 'package:rg_rek/features/events/data/models/game_outcome_model.dart';
 import 'package:rg_rek/features/events/data/models/response_model.dart';
 
-// Event Model
+const tCategoryId = '1';
 
 var tResponseModel = ResponseModel(
   code: 200,
@@ -18,6 +18,7 @@ final tEventModelList = [
   tEventModel,
 ];
 
+// Event Model
 final tEventModel = EventModel(
   category1Id: 1,
   category1Name: 'category1Name',

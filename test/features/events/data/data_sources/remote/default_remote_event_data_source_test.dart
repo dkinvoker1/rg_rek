@@ -23,8 +23,6 @@ void main() {
   group(
     'getEventsByCategory',
     () {
-      const tCategoryId = '1';
-
       void setUpResponseCode200() {
         when(mockClient.getEventsByCategory(tCategoryId)).thenAnswer(
           (_) async => tResponseModel,
